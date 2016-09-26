@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+						"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Pais">
+
+    <parameterMap class="bean.BeanPais" id="paisMap" >
+   	    <parameter property="intpisId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+   	    <parameter property="strpisDescripcion"   	jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+		<parameter property="strpisContinente" 	  	jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+		<parameter property="dtepisFechaIngreso"  	jdbcType="DATE"    javaType="java.util.Date"    mode="INOUT" />
+		<parameter property="dtepisFechaUpdate"     jdbcType="DATE"    javaType="java.util.Date"    mode="INOUT" />		
+		<parameter property="strpisUserIngreso"  	jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+		<parameter property="strpisUserUpdate"      jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+		<parameter property="strpisLocale"  		jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+		<parameter property="strpisDescLocale"  	jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />			
+	</parameterMap>
+
+    <procedure id="SP_PISPAIS" resultClass="bean.BeanPais">  
+   { call SP_PISPAIS() } 
+</procedure>
+    
+</sqlMap>

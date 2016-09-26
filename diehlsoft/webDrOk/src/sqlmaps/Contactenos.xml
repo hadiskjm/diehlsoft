@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+						"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Contactenos">
+	  
+    <parameterMap class="bean.BeanContactenos" id="contactenosMapInsert" >
+   	    <parameter property="intconId"   	         jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+   	    <parameter property="strconNombresCompletos" jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+   	    <parameter property="strconCorreo"  	     jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+   	    <parameter property="strconComentario"  	 jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="dteconFechaIngreso"  	 jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />		
+		
+	</parameterMap>
+	
+
+    <procedure id="SP_CONINSERT" parameterMap="contactenosMapInsert">  
+   { call SP_CONINSERT(?,?,?,?,?) } 
+    </procedure>
+    
+    <procedure id="SP_CONSEARCHLIST" resultClass="bean.BeanContactenos">  
+   { call SP_CONSEARCHLIST() } 
+    </procedure>
+
+
+</sqlMap>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+						"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="OpcionPerfil">
+	  
+    <parameterMap class="bean.BeanOpcionPerfil" id="opcionPerfilMapInsert" >
+   	    <parameter property="intoppId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+   	    <parameter property="stroppDescripcion"   	jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+		<parameter property="dteoppFechaIngreso"  	jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />
+		<parameter property="dteoppFechaUpdate"     jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />		
+		<parameter property="stroppUserIngreso"  	jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="stroppUserUpdate"      jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="stroppEstado"  		jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="intpefId"  		    jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+		<parameter property="stroppLocale"  	    jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />			
+	</parameterMap>
+	
+	<parameterMap class="bean.BeanOpcionPerfil" id="opcionPerfilMapUpdate" >
+   	    <parameter property="intoppId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+   	    <parameter property="stroppDescripcion"   	jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+		<parameter property="dteoppFechaUpdate"     jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />		
+		<parameter property="stroppUserUpdate"      jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="stroppEstado"  		jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="intpefId"  		    jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+		<parameter property="stroppLocale"  	    jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="intoppMensaje"   	    jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />			
+	</parameterMap>	
+
+    <procedure id="SP_OPPINSERT" parameterMap="opcionPerfilMapInsert">  
+   { call SP_OPPINSERT(?,?,?,?,?,?,?,?,?) } 
+    </procedure>
+    
+    <procedure id="SP_OPPUPDATE" parameterMap="opcionPerfilMapUpdate">  
+   { call SP_OPPUPDATE(?,?,?,?,?,?,?,?) } 
+    </procedure>
+    
+    <procedure id="SP_OPPACTIVEOINACTIVE" resultClass="bean.BeanOpcionPerfil" parameterClass="bean.BeanOpcionPerfil">   
+   { call SP_OPPACTIVEOINACTIVE(#intoppId#,#dteoppFechaUpdate#,#stroppUserUpdate#,#stroppEstado#) } 
+    </procedure>
+    
+    <procedure id="SP_OPPAUCLIST" resultClass="bean.BeanOpcionPerfil" parameterClass="bean.BeanOpcionPerfil">  
+   { call SP_OPPAUCLIST(#stroppDescripcion#,#stroppLocale#) } 
+    </procedure>
+    
+    <procedure id="SP_OPPSEARCHLIST" resultClass="bean.BeanOpcionPerfil" parameterClass="bean.BeanOpcionPerfil">  
+   { call SP_OPPSEARCHLIST(#stroppDescripcion#,#stroppEstado#,#stroppLocale#) } 
+    </procedure>
+    
+    <procedure id="SP_OPPSEARCHXID" parameterClass="Integer" resultClass="bean.BeanOpcionPerfil">  
+   { call SP_OPPSEARCHXID(#value#) } 
+    </procedure>
+    
+</sqlMap>

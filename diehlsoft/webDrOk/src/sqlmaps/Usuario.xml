@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+						"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Usuario">
+
+    <parameterMap class="bean.BeanUsuario" id="usuMapInsert" >
+   	    <parameter property="intusuId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+   	    <parameter property="strusuUser"   	        jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strusuPassword" 	  	jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strusuConfirPassword"  jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="dteusuFechaInicio"  	jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />
+		<parameter property="dteusuFechaFinal"      jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />		
+		<parameter property="strusuEstado"  		jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strusuUserDesc"  	    jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />			
+		<parameter property="strperCorreo"  	    jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+	</parameterMap>
+	
+	<procedure id="SP_USUINSERT" parameterMap="usuMapInsert">  
+   { call SP_USUINSERT(?,?,?,?,?,?,?,?,?) } 
+    </procedure>
+   
+    <procedure id="SP_USUAUTENTICAR" parameterClass="bean.BeanUsuario"
+	                                 resultClass="bean.BeanUsuario">  
+   { call SP_USUAUTENTICAR( #strusuUser#,#strusuPassword# ) } 
+    </procedure>
+    
+    <procedure id="SP_USUSEARCHXID" parameterClass="Integer"
+	                                 resultClass="bean.BeanUsuario">  
+   { call SP_USUSEARCHXID( #intusuId# ) } 
+    </procedure>
+    
+</sqlMap>

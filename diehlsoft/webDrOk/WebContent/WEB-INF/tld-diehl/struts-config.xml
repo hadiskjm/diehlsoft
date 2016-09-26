@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+
+   <form-beans>
+   
+    <form-bean name="usuarioForm" type="org.apache.struts.validator.DynaValidatorForm">
+        <form-property name="strusuUser" type="java.lang.String" />
+        <form-property name="strusuPassword" type="java.lang.String" />
+        <form-property name="strusuIdioma" type="java.lang.String" />
+        
+        <form-property name="listaPais" type="java.util.ArrayList" />
+     
+      </form-bean>
+      
+       <form-bean name="perfilForm" type="org.apache.struts.validator.DynaValidatorForm">       
+        <form-property name="intpefId"   	        type="java.lang.Integer" />
+   	    <form-property name="strpefDescripcion"   	type="java.lang.String"  />
+		<form-property name="dtepefFechaIngreso"  	type="java.util.Date"    />
+		<form-property name="dtepefFechaUpdate"     type="java.util.Date"    />		
+		<form-property name="strpefUserIngreso"  	type="java.lang.String"  />
+		<form-property name="strpefUserUpdate"      type="java.lang.String"  />
+		<form-property name="strpefEstado"  		type="java.lang.String"  />
+		<form-property name="strpefLocale"  	    type="java.lang.String"  />
+		
+		<form-property name="strestNombre"  	    type="java.lang.String"  />
+		<form-property name="flagConfirm"  	        type="java.lang.String"  />
+		<form-property name="saveandadd"  	        type="java.lang.String"  />
+		
+		<form-property name="estModuloPef" type="java.util.ArrayList" />
+		<form-property name="pefSearchList" type="java.util.ArrayList" />
+      </form-bean>
+     
+     <form-bean name="opcionPerfilForm" type="org.apache.struts.validator.DynaValidatorForm">       
+        <form-property name="intoppId"   	        type="java.lang.Integer" />
+   	    <form-property name="stroppDescripcion"   	type="java.lang.String"  />
+		<form-property name="dteoppFechaIngreso"  	type="java.util.Date"    />
+		<form-property name="dteoppFechaUpdate"     type="java.util.Date"    />		
+		<form-property name="stroppUserIngreso"  	type="java.lang.String"  />
+		<form-property name="stroppUserUpdate"      type="java.lang.String"  />
+		<form-property name="stroppEstado"  		type="java.lang.String"  />
+		<form-property name="intpefId"   	        type="java.lang.Integer" />
+		<form-property name="stroppLocale"  	    type="java.lang.String"  />
+		
+		<form-property name="strestNombre"  	    type="java.lang.String"  />
+		<form-property name="flagConfirm"  	        type="java.lang.String"  />
+		<form-property name="saveandadd"  	        type="java.lang.String"  />
+		
+		<form-property name="estModuloOpp" type="java.util.ArrayList" />
+		<form-property name="oppSearchList" type="java.util.ArrayList" />
+        <form-property name="pefSearchList" type="java.util.ArrayList" />
+        
+      </form-bean>
+      
+      <form-bean name="actualidadLaboralForm" type="org.apache.struts.validator.DynaValidatorForm">       
+        <form-property name="intaclId"   	        type="java.lang.Integer" />
+        <form-property name="straclTitulo"   	    type="java.lang.String"  />
+   	    <form-property name="straclNombre"   	    type="java.lang.String"  />
+   	    <form-property name="straclContenido"   	type="java.lang.String"  />
+   	    <form-property name="straclResumen"   	    type="java.lang.String"  />
+		<form-property name="dteaclFechaIngreso"  	type="java.util.Date"    />
+		<form-property name="dteaclFechaUpdate"     type="java.util.Date"    />		
+		<form-property name="straclUserIngreso"  	type="java.lang.String"  />
+		<form-property name="straclUserUpdate"      type="java.lang.String"  />
+		<form-property name="straclEstado"  		type="java.lang.String"  />
+		<form-property name="straclFile"  		    type="org.apache.struts.upload.FormFile" />
+		<form-property name="strbolFile"  		    type="java.lang.String"  />
+		<form-property name="intbolId"   	        type="java.lang.Integer" />
+		<form-property name="intusuId"   	        type="java.lang.Integer" />
+				
+		<form-property name="strbolNombre"  	    type="java.lang.String"  />
+		<form-property name="strestNombre"  	    type="java.lang.String"  />
+		<form-property name="flagConfirm"  	        type="java.lang.String"  />
+		<form-property name="saveandadd"  	        type="java.lang.String"  />
+		<form-property name="straclCorreo"  	    type="java.lang.String"  />
+		<form-property name="straclCorreoMensaje"   type="java.lang.String"  />
+		
+		<form-property name="aclModuloEstado"       type="java.util.ArrayList" />
+		<form-property name="aclSearchList"         type="java.util.ArrayList" />
+        <form-property name="aclSearchListxestado"  type="java.util.ArrayList" />
+        <form-property name="aclOpcionesTitulo"     type="java.util.ArrayList" />
+        <form-property name="aclListxbolId"         type="java.util.ArrayList" />
+        <form-property name="aclListxbolId2"        type="java.util.ArrayList" />
+        <form-property name="aclVisorBean"          type="java.util.ArrayList" />
+      </form-bean>
+      
+      <form-bean name="imagenForm" type="org.apache.struts.validator.DynaValidatorForm">       
+        <form-property name="intimgId"   	        type="java.lang.Integer" />
+   	    <form-property name="strimgNombre"   	    type="org.apache.struts.upload.FormFile" />
+   	    <form-property name="strimgNombrexMostrar"  type="java.lang.String"  />
+   	    <form-property name="strimgModulo"   	    type="java.lang.String"  />
+		<form-property name="dteimgFechaIngreso"  	type="java.util.Date"    />
+		<form-property name="dteimgFechaUpdate"     type="java.util.Date"    />		
+		<form-property name="strimgUserIngreso"  	type="java.lang.String"  />
+		<form-property name="strimgUserUpdate"      type="java.lang.String"  />
+		<form-property name="strimgEstado"  		type="java.lang.String"  />
+				
+		<form-property name="strestNombre"  	    type="java.lang.String"  />
+		<form-property name="flagConfirm"  	        type="java.lang.String"  />
+		<form-property name="saveandadd"  	        type="java.lang.String"  />
+		<form-property name="strimgNombreLbl"  	    type="java.lang.String"  />
+		
+		<form-property name="imgModuloEstado"        type="java.util.ArrayList" />
+		<form-property name="imgModuloModuloEstado"  type="java.util.ArrayList" />
+		<form-property name="imgSearchList"          type="java.util.ArrayList" />
+        <form-property name="imgModCamList"          type="java.util.ArrayList" />
+        
+      </form-bean>
+      
+      <form-bean name="boletinForm" type="org.apache.struts.validator.DynaValidatorForm">       
+        <form-property name="intbolId"   	        type="java.lang.Integer" />
+   	    <form-property name="strbolNombre"   	    type="java.lang.String"  />
+		<form-property name="dtebolFechaIngreso"  	type="java.util.Date"    />
+		<form-property name="dtebolFechaUpdate"     type="java.util.Date"    />		
+		<form-property name="strbolUserIngreso"  	type="java.lang.String"  />
+		<form-property name="strbolUserUpdate"      type="java.lang.String"  />
+		<form-property name="strbolEstado"  		type="java.lang.String"  />
+		<form-property name="strbolFile"  		    type="org.apache.struts.upload.FormFile" />
+		<form-property name="intusuId"   	        type="java.lang.Integer" />
+				
+		<form-property name="strestNombre"  	    type="java.lang.String"  />
+		<form-property name="flagConfirm"  	        type="java.lang.String"  />
+		<form-property name="saveandadd"  	        type="java.lang.String"  />
+		
+		<form-property name="bolModuloEstado"       type="java.util.ArrayList" />
+		<form-property name="bolSearchList"         type="java.util.ArrayList" />
+		<form-property name="bolSearchListBack"     type="java.util.ArrayList" />
+      </form-bean>
+      
+      <form-bean name="menunivel1Form" type="org.apache.struts.validator.DynaValidatorForm">       
+        <form-property name="intmecId"   	             type="java.lang.Integer" />
+   	    <form-property name="strmecMenu"   	             type="java.lang.String" />
+   	    <form-property name="dtemecFechaIngreso"  	     type="java.util.Date"    />
+		<form-property name="dtemecFechaUpdate"          type="java.util.Date"    />		
+		<form-property name="strmecUserIngreso"  	     type="java.lang.String"  />
+		<form-property name="strmecUserUpdate"           type="java.lang.String"  />
+		<form-property name="strmecLocale"               type="java.lang.String"  />
+		<form-property name="strmecTipoSistema"          type="java.lang.String"  /> 
+   	    <form-property name="strmecNombreImagen"         type="java.lang.String" />
+   	    <form-property name="strmecNombrePdf"            type="java.lang.String" />
+		<form-property name="strmecNombreMenu"           type="java.lang.String"  />
+		<form-property name="strmecTwitterCard"          type="java.lang.String"  />
+		<form-property name="strmecTwitterSite"          type="java.lang.String"  />
+		<form-property name="strmecTwitterCreator"       type="java.lang.String"  />
+		<form-property name="strmecTwitterTitle"         type="java.lang.String"  />
+		<form-property name="strmecTwitterDescription"   type="java.lang.String"  />
+		<form-property name="strmecTwitterImage"         type="java.lang.String"  />
+		<form-property name="strmecGoogleName"           type="java.lang.String"  />
+		<form-property name="strmecGoogleDescription"    type="java.lang.String"  />
+		<form-property name="strmecGoogleImage"          type="java.lang.String"  />
+		<form-property name="strmecOgTitle"              type="java.lang.String"  />
+		<form-property name="strmecOgType"               type="java.lang.String"  />
+		<form-property name="strmecOgUrl"                type="java.lang.String"  />
+		<form-property name="strmecOgImage"              type="java.lang.String"  />
+		<form-property name="strmecOgDescription"        type="java.lang.String"  />
+		<form-property name="strmecOgSite_name"          type="java.lang.String"  />
+		<form-property name="strmecMuestraContenido"     type="java.lang.String"  />
+		<form-property name="intmecNivelUsuario"   	     type="java.lang.Integer" />
+		<form-property name="strmecEstado"               type="java.lang.String"  />
+		<form-property name="strmecEvento"               type="java.lang.String"  />
+		<form-property name="intmecPosicion"   	         type="java.lang.Integer" />
+				
+		<form-property name="strestNombre"  	    type="java.lang.String"  />
+		<form-property name="flagConfirm"  	        type="java.lang.String"  />
+		<form-property name="saveandadd"  	        type="java.lang.String"  />
+		<form-property name="intmenuNivelUser"   	type="java.lang.Integer" />
+				        
+        <form-property name="mecListSearch"              type="java.util.ArrayList" />
+        <form-property name="mecListMenuNivel1"          type="java.util.ArrayList" />
+        <form-property name="mecListTipoSistema"         type="java.util.ArrayList" />
+        <form-property name="mecListMostrarContenido"    type="java.util.ArrayList" />
+
+      </form-bean>
+      
+       <form-bean name="menunivel2Form" type="org.apache.struts.validator.DynaValidatorForm">       
+        <form-property name="intmedId"   	             type="java.lang.Integer" />
+   	    <form-property name="strmedMenu"   	             type="java.lang.String" />
+   	    <form-property name="dtemedFechaIngreso"  	     type="java.util.Date"    />
+		<form-property name="dtemedFechaUpdate"          type="java.util.Date"    />		
+		<form-property name="strmedUserIngreso"  	     type="java.lang.String"  />
+		<form-property name="strmedUserUpdate"           type="java.lang.String"  />
+		<form-property name="strmedLocale"               type="java.lang.String"  />
+		<form-property name="strmedTipoSistema"          type="java.lang.String"  /> 
+   	    <form-property name="strmedNombreImagen"         type="java.lang.String" />
+   	    <form-property name="strmedNombrePdf"            type="java.lang.String" />
+		<form-property name="strmedNombreMenu"           type="java.lang.String"  />
+		<form-property name="strmedTwitterCard"          type="java.lang.String"  />
+		<form-property name="strmedTwitterSite"          type="java.lang.String"  />
+		<form-property name="strmedTwitterCreator"       type="java.lang.String"  />
+		<form-property name="strmedTwitterTitle"         type="java.lang.String"  />
+		<form-property name="strmedTwitterDescription"   type="java.lang.String"  />
+		<form-property name="strmedTwitterImage"         type="java.lang.String"  />
+		<form-property name="strmedGoogleName"           type="java.lang.String"  />
+		<form-property name="strmedGoogleDescription"    type="java.lang.String"  />
+		<form-property name="strmedGoogleImage"          type="java.lang.String"  />
+		<form-property name="strmedOgTitle"              type="java.lang.String"  />
+		<form-property name="strmedOgType"               type="java.lang.String"  />
+		<form-property name="strmedOgUrl"                type="java.lang.String"  />
+		<form-property name="strmedOgImage"              type="java.lang.String"  />
+		<form-property name="strmedOgDescription"        type="java.lang.String"  />
+		<form-property name="strmedOgSite_name"          type="java.lang.String"  />
+		<form-property name="strmedMuestraContenido"     type="java.lang.String"  />
+		<form-property name="intmedNivelUsuario"   	     type="java.lang.Integer" />
+		<form-property name="strmedEstado"               type="java.lang.String"  />
+		<form-property name="strmedEvento"               type="java.lang.String"  />
+		<form-property name="intmecId"   	             type="java.lang.Integer" />
+		<form-property name="intmedPosicion"   	         type="java.lang.Integer" />
+				
+		<form-property name="strestNombre"  	        type="java.lang.String"  />
+		<form-property name="flagConfirm"  	            type="java.lang.String"  />
+		<form-property name="saveandadd"  	            type="java.lang.String"  />
+				        
+        <form-property name="medListSearch"              type="java.util.ArrayList" />
+        <form-property name="medListMenuNivel2"          type="java.util.ArrayList" />
+        <form-property name="medListMenuNivel1"          type="java.util.ArrayList" />
+        <form-property name="medListTipoSistema"         type="java.util.ArrayList" />
+        <form-property name="medListMostrarContenido"    type="java.util.ArrayList" />
+      </form-bean>
+      
+       <form-bean name="menunivel3Form" type="org.apache.struts.validator.DynaValidatorForm">       
+        <form-property name="intmetId"   	             type="java.lang.Integer" />
+   	    <form-property name="strmetMenu"   	             type="java.lang.String" />
+   	    <form-property name="dtemetFechaIngreso"  	     type="java.util.Date"    />
+		<form-property name="dtemetFechaUpdate"          type="java.util.Date"    />		
+		<form-property name="strmetUserIngreso"  	     type="java.lang.String"  />
+		<form-property name="strmetUserUpdate"           type="java.lang.String"  />
+		<form-property name="strmetLocale"               type="java.lang.String"  />
+		<form-property name="strmetTipoSistema"          type="java.lang.String"  /> 
+   	    <form-property name="strmetNombreImagen"         type="java.lang.String" />
+   	    <form-property name="strmetNombrePdf"            type="java.lang.String" />
+		<form-property name="strmetNombreMenu"           type="java.lang.String"  />
+		<form-property name="strmetTwitterCard"          type="java.lang.String"  />
+		<form-property name="strmetTwitterSite"          type="java.lang.String"  />
+		<form-property name="strmetTwitterCreator"       type="java.lang.String"  />
+		<form-property name="strmetTwitterTitle"         type="java.lang.String"  />
+		<form-property name="strmetTwitterDescription"   type="java.lang.String"  />
+		<form-property name="strmetTwitterImage"         type="java.lang.String"  />
+		<form-property name="strmetGoogleName"           type="java.lang.String"  />
+		<form-property name="strmetGoogleDescription"    type="java.lang.String"  />
+		<form-property name="strmetGoogleImage"          type="java.lang.String"  />
+		<form-property name="strmetOgTitle"              type="java.lang.String"  />
+		<form-property name="strmetOgType"               type="java.lang.String"  />
+		<form-property name="strmetOgUrl"                type="java.lang.String"  />
+		<form-property name="strmetOgImage"              type="java.lang.String"  />
+		<form-property name="strmetOgDescription"        type="java.lang.String"  />
+		<form-property name="strmetOgSite_name"          type="java.lang.String"  />
+		<form-property name="strmetMuestraContenido"     type="java.lang.String"  />
+		<form-property name="intmetNivelUsuario"   	     type="java.lang.Integer" />
+		<form-property name="strmetEstado"               type="java.lang.String"  />
+		<form-property name="strmetEvento"               type="java.lang.String"  />
+		<form-property name="intmedId"   	             type="java.lang.Integer" />
+		<form-property name="intmetPosicion"           	 type="java.lang.Integer" />
+				
+		<form-property name="strestNombre"  	         type="java.lang.String"  />
+		<form-property name="flagConfirm"  	             type="java.lang.String"  />
+		<form-property name="saveandadd"  	             type="java.lang.String"  />
+		<form-property name="intmecId"   	             type="java.lang.Integer" />
+				        
+        <form-property name="metListSearch"              type="java.util.ArrayList" />
+        <form-property name="metListMenuNivel3"          type="java.util.ArrayList" />
+        <form-property name="metListMenuNivel2"          type="java.util.ArrayList" />
+        <form-property name="metListMenuNivel1"          type="java.util.ArrayList" />
+        <form-property name="metListTipoSistema"         type="java.util.ArrayList" />
+        <form-property name="metListMostrarContenido"    type="java.util.ArrayList" />
+      </form-bean>
+      
+      <form-bean name="contactenosForm" type="org.apache.struts.validator.DynaValidatorForm">       
+        <form-property name="intconId"   	          type="java.lang.Integer" />
+   	    <form-property name="strconNombresCompletos"  type="java.lang.String"  />
+   	    <form-property name="strconCorreo"  	      type="java.lang.String"  />
+   	    <form-property name="strconComentario"  	  type="java.lang.String"  />
+		<form-property name="dteconFechaIngreso"  	  type="java.util.Date"    />		
+
+		<form-property name="flagConfirm"  	        type="java.lang.String"  />
+		<form-property name="saveandadd"  	        type="java.lang.String"  />
+
+		<form-property name="conListSearch"         type="java.util.ArrayList" />
+
+      </form-bean>
+      
+      <form-bean name="trabajanosotrosForm" type="org.apache.struts.validator.DynaValidatorForm">       
+        <form-property name="inttcnId"   	          type="java.lang.Integer" />
+   	    <form-property name="strtcnNombres"           type="java.lang.String"  />
+   	    <form-property name="strtcnApellidos"  	      type="java.lang.String"  />
+   	    <form-property name="inttcnEdad"   	          type="java.lang.Integer" />
+   	    <form-property name="strtcnDireccion"  	      type="java.lang.String"  />
+   	    <form-property name="strtcnCorreo"  	      type="java.lang.String"  />
+   	    <form-property name="lbltcnCurriculum"  	  type="org.apache.struts.upload.FormFile"  />
+		<form-property name="dtetcnFechaIngreso"  	  type="java.util.Date"    />		
+
+		<form-property name="flagConfirm"  	        type="java.lang.String"  />
+		<form-property name="saveandadd"  	        type="java.lang.String"  />
+
+		<form-property name="tcnListSearch"         type="java.util.ArrayList" />
+
+      </form-bean>
+      
+      <form-bean name="personaForm" type="org.apache.struts.validator.DynaValidatorForm">       
+        <form-property name="intperId"   	          type="java.lang.Integer" />
+   	    <form-property name="strperNombre"            type="java.lang.String"  />
+   	    <form-property name="strperApellidoPaterno"   type="java.lang.String"  />
+   	    <form-property name="strperApellidoMaterno"   type="java.lang.String"  />
+   	    <form-property name="strperSexo"              type="java.lang.String"  />
+   	    <form-property name="strperCorreo"            type="java.lang.String"  />
+   	    <form-property name="strperDireccion"  	      type="java.lang.String"  />
+   	    <form-property name="strperTelefono"   	      type="java.lang.String" />
+   	    <form-property name="strperEstado"  	      type="java.lang.String"  />
+		<form-property name="dteperFechaIngreso"  	  type="java.util.Date"    />
+		<form-property name="dteperFechaUpdate"  	  type="java.util.Date"    />	
+		<form-property name="strperUserIngreso"  	  type="java.lang.String"  />
+		<form-property name="strperUserUpdate"  	  type="java.lang.String"  />	
+		<form-property name="intusuId"   	          type="java.lang.Integer" />
+		<form-property name="strperTheme"  	          type="java.lang.String"  />	
+		<form-property name="strperLocale"  	      type="java.lang.String"  />	
+		<form-property name="intpefId"   	          type="java.lang.Integer" />
+		<form-property name="intpisId"   	          type="java.lang.Integer" />
+		
+		
+        <form-property name="strusuUser"            type="java.lang.String"  />
+        <form-property name="strusuPassword"        type="java.lang.String"  />
+        <form-property name="strusuConfirPassword"  type="java.lang.String"  />
+		<form-property name="flagConfirm"  	        type="java.lang.String"  />
+		<form-property name="saveandadd"  	        type="java.lang.String"  />
+
+		<form-property name="perListSearch"         type="java.util.ArrayList" />
+		<form-property name="perListPais"           type="java.util.ArrayList" />
+
+      </form-bean>
+      
+      <form-bean name="jurisprudenciaForm" type="org.apache.struts.validator.DynaValidatorForm">       
+      </form-bean>
+      
+      <form-bean name="gestionPersonasForm" type="org.apache.struts.validator.DynaValidatorForm">       
+      </form-bean>
+      
+     <form-bean name="rptGraf1Form" type="org.apache.struts.action.DynaActionForm">
+      </form-bean> 
+      
+   </form-beans>
+    
+    <global-exceptions>
+    </global-exceptions>
+    
+	<!-- Action mappings configuration  -->
+   <action-mappings>
+         <!-- 1. para pagina de login -->  
+       <action path="/drokhealthcare" forward="/menunivel1Search.do?event=mecMenu" /> 
+           <!-- 2. para redireccionar desde el menu principal --> 
+          <action path="/redireccionando" 
+                type="action.RedireccionandoAction"
+                parameter="event" 
+                validate="false">
+            <forward name="fLogin" path="page.login" />
+            <forward name="failure" path="page.login" />
+            <forward name="actualidadLaboralPublic" path="/actualidadLaboralPublic.do?event=actualidadLaboralPublic" />
+            <forward name="jurisprudenciaPublic" path="page.jurisprudenciaPublic" />
+            <forward name="perfilSearch" path="/perfilSearch.do?event=perfilSearch"  />
+            <forward name="opcionPerfilSearch" path="/opcionPerfilSearch.do?event=opcionPerfilSearch"  />
+            <forward name="imagenSearch" path="/imagenSearch.do?event=imagenSearch"  />
+            <forward name="boletinSearch" path="/boletinSearch.do?event=boletinSearch" />
+            <forward name="regulacionLaboralPublic" path="/regulacionLaboralPublic.do?event=regulacionLaboralPublic" />
+            <forward name="criterioPublic" path="/criterioPublic.do?event=criterioPublic" />
+            <forward name="gestionPersonasPublic" path="/gestionPersonasPublic.do?event=gestionPersonasPublic"/>
+            <forward name="notasPrensaPublic" path="/notasPrensaPublic.do?event=notasPrensaPublic"/>
+            <forward name="publicacionesPublic" path="/publicacionesPublic.do?event=publicacionesPublic"/>
+            <forward name="homeEducation" path="page.education.home"/>
+            <forward name="homeNews" path="page.news.home"/>
+            <forward name="homeCorp" path="/menunivel1Search.do?event=mecMenu"/>
+            <forward name="mecSearch" path="/menunivel1Search.do?event=mecSearch"/>
+            <forward name="medSearch" path="/menunivel2Search.do?event=medSearch"/>
+            <forward name="metSearch" path="/menunivel3Search.do?event=metSearch"/>
+            <forward name="conSearch" path="/contactenosSearch.do?event=conSearch"/>
+            <forward name="tcnSearch" path="/tcnosotrosSearch.do?event=tcnSearch"/>
+            <forward name="perNew" path="page.corp.personaNew"/>
+            <forward name="aviso" path="page.corp.avisoLegal"/>
+
+        </action>
+        
+         <!-- 3. para el matenimiento de tb_usuario y demas opciones -->                
+        <action path="/usuario" 
+                type="action.UsuarioAction"
+                parameter="event"
+                name="usuarioForm"
+                validate="true"
+                scope="session"
+                input="page.login">
+            <forward name="failure" path="page.login" />
+            <forward name="fLogin" path="page.login" />
+            <forward name="changePaisLogin" path="page.login" />
+            <forward name="actualidadLaboralPublic" path="/actualidadLaboralPublic.do?event=actualidadLaboralPublic" /> 
+             <forward name="success" path="/menunivel1Search.do?event=mecMenu" />
+        </action>
+         <!-- 4. para cerrar la sesión --> 
+        <action path="/logout" 
+                type="action.LogoutAction"
+                scope="session">
+            <forward name="success" path="page.login" />
+        </action>
+        <!-- 5. para el matenimiento de tb_perfil y demas opciones --> 
+        <!--  Buscar Perfil -->
+        <action path="/perfilSearch" 
+                type="action.PerfilAction"
+                parameter="event"
+                name="perfilForm"
+                validate="false"
+                scope="session"
+                input="page.perfilSearch">
+            <forward name="estModuloPef" path="page.perfilSearch" />
+            <forward name="pefSearchList" path="page.perfilSearch" />
+            <forward name="pefUpdate" path="page.perfilUpdate" />
+            <forward name="perfilSearch" path="/perfilSearch.do?event=perfilSearch"  />
+           <forward name="pefNew" path="/perfilSearch.do?event=perfilSearch" />  <!--  esto se utiliza para que no haya caidas inesperadas del grid despues de guardar -->
+        </action>
+        <!--  Nuevo Perfil -->
+        <action path="/perfilMn" 
+                type="action.PerfilAction"
+                parameter="event"
+                name="perfilForm"
+                validate="true"
+                scope="session"
+                input="page.perfilMn">
+            <forward name="pefNew" path="page.perfilMn" />
+            <forward name="perfilSearch" path="page.perfilSearch"/>    
+        </action>
+        <!--  Update Perfil -->
+        <action path="/perfilUpdate" 
+                type="action.PerfilAction"
+                parameter="event"
+                name="perfilForm"
+                validate="true"
+                scope="session"
+                input="page.perfilUpdate">
+            <forward name="perfilSearch" path="page.perfilSearch"  />  
+            <forward name="pefUpdate" path="page.perfilUpdate" />  
+        </action>  
+        
+        <!-- 6. para el matenimiento de tb_opcionperfil y demas opciones --> 
+        <!--  Buscar OpcionPerfil -->
+        <action path="/opcionPerfilSearch" 
+                type="action.OpcionPerfilAction"
+                parameter="event"
+                name="opcionPerfilForm"
+                validate="false"
+                scope="session"
+                input="page.opcionPerfilSearch">
+            <forward name="estModuloOpp" path="page.opcionPerfilSearch" />
+            <forward name="oppSearchList" path="page.opcionPerfilSearch" />
+            <forward name="oppUpdate" path="page.perfilUpdate" />
+            <forward name="opcionPerfilSearch" path="/opcionPerfilSearch.do?event=opcionPerfilSearch"  />
+            <forward name="oppNew" path="/opcionPerfilNew.do?event=opcionPerfilSearch" />     <!--  esto se utiliza para que no haya caidas inesperadas del grid despues de guardar -->
+        </action>  
+        
+        <!--  Nuevo Perfil -->
+        <action path="/opcionPerfilNew" 
+                type="action.OpcionPerfilAction"
+                parameter="event"
+                name="opcionPerfilForm"
+                validate="true"
+                scope="session"
+                input="page.opcionPerfilNew">
+            <forward name="oppNew" path="page.opcionPerfilNew" /> 
+            <forward name="opcionPerfilSearch" path="page.opcionPerfilSearch"/>    
+        </action>
+        <!-- 7. para el matenimiento de tb_actualidadLaboral y demas opciones --> 
+        <!--  Buscar Actualidad Laboral -->
+        <action path="/actualidadLaboralSearch" 
+                type="action.ActualidadLaboralAction"
+                parameter="event"
+                name="actualidadLaboralForm"
+                validate="false"
+                scope="session"
+                input="page.actualidadLaboralSearch">
+            <forward name="aclModuloEstado" path="page.actualidadLaboralSearch" />
+            <forward name="aclSearchList" path="page.actualidadLaboralSearch" />  
+           <forward name="aclNew" path="/actualidadLaboralSearch.do?event=actualidadLaboralSearch" />  <!--  esto se utiliza para que no haya caidas inesperadas del grid despues de guardar -->
+        </action>
+          <!--  Nuevo Actualidad Laboral -->
+        <action path="/actualidadLaboralNew" 
+                type="action.ActualidadLaboralAction"
+                parameter="event"
+                name="actualidadLaboralForm"
+                validate="true"
+                scope="session"
+                input="page.actualidadLaboralNew">
+            <forward name="aclNew" path="page.actualidadLaboralNew" />
+            <forward name="actualidadLaboralSearch" path="page.actualidadLaboralSearch"/>  
+            <forward name="aclModuloEstado" path="page.actualidadLaboralSearch" />  
+        </action>
+         <!--  publicado Actualidad Laboral -->
+        <action path="/actualidadLaboralPublicado" 
+                type="action.ActualidadLaboralAction"
+                parameter="event"
+                name="actualidadLaboralForm"
+                validate="true"
+                scope="session"
+                input="page.actualidadLaboralPublicado">
+            <forward name="actualidadLaboralPublicado" path="page.actualidadLaboralPublicado" />  
+        </action>
+        
+        <!--  nUEVO publicado Actualidad Laboral -->
+        <action path="/actualidadLaboralPublic" 
+                type="action.ActualidadLaboralAction"
+                parameter="event"
+                name="actualidadLaboralForm"
+                validate="true"
+                scope="session"
+                input="page.actualidadLaboralPublic">
+            <forward name="actualidadLaboralPublic" path="page.actualidadLaboralPublic" />  
+        </action>
+        
+        <!--  Lista anteriores boletines por ID -->
+        <action path="/actualidadLaboralListBol" 
+                type="action.ActualidadLaboralAction"
+                parameter="event"
+                name="actualidadLaboralForm"
+                validate="true"
+                scope="session"
+                input="page.actualidadLaboralListBol">
+            <forward name="aclListxbolId" path="page.actualidadLaboralListBol" />  
+        </action>
+        
+        <!--  visor send -->
+        <action path="/actualidadLaboralVisorSend" 
+                type="action.ActualidadLaboralAction"
+                parameter="event"
+                name="actualidadLaboralForm"
+                validate="true"
+                scope="session"
+                input="page.actualidadLaboralVisorSend">
+            <forward name="aclVisorSend" path="page.actualidadLaboralVisorSend" />  
+        </action>
+        
+         <!--  visor -->
+        <action path="/actualidadLaboralVisor" 
+                type="action.ActualidadLaboralAction"
+                parameter="event"
+                name="actualidadLaboralForm"
+                validate="true"
+                scope="session"
+                input="page.actualidadLaboralVisor">
+            <forward name="aclVisor" path="page.actualidadLaboralVisor" />  
+        </action>
+        
+        <!--  Actualizar Actualidad Laboral -->
+        <action path="/actualidadLaboralUpdate" 
+                type="action.ActualidadLaboralAction"
+                parameter="event"
+                name="actualidadLaboralForm"
+                validate="true"
+                scope="session"
+                input="page.actualidadLaboralUpdate">
+            <forward name="aclUpdate" path="page.actualidadLaboralUpdate" />  
+            <forward name="actualidadLaboralSearch" path="page.actualidadLaboralSearch"/>
+            <forward name="aclModuloEstado" path="page.actualidadLaboralSearch" />   
+        </action>
+        <!--  Previa Actualidad Laboral -->
+        <action path="/actualidadLaboralPrevia" 
+                type="action.ActualidadLaboralAction"
+                parameter="event"
+                name="actualidadLaboralForm"
+                validate="true"
+                scope="session"
+                input="page.actualidadLaboralPrevia">
+            <forward name="aclVistaPrevia" path="page.actualidadLaboralPrevia" />   
+            <forward name="actualidadLaboralSendPrevio" path="page.actualidadLaboralPrevia" />
+            <forward name="aclModuloEstado" path="page.actualidadLaboralSearch" />
+        </action>
+        
+        <!--  Invitación Actualidad Laboral -->
+        <action path="/actualidadLaboralInvitacion" 
+                type="action.ActualidadLaboralAction"
+                parameter="event"
+                name="actualidadLaboralForm"
+                validate="true"
+                scope="session"
+                input="page.actualidadLaboralInvitacion">
+            <forward name="aclInvitacion" path="page.actualidadLaboralInvitacion" />
+            <forward name="actualidadLaboralPublicado" path="page.actualidadLaboralPublicado" /> 
+        </action>
+       <!-- 8. para el matenimiento de tb_imagen y demas opciones --> 
+        <!--  Buscar Imagen -->
+        <action path="/imagenSearch" 
+                type="action.ImagenAction"
+                parameter="event"
+                name="imagenForm"
+                validate="false"
+                scope="session"
+                input="page.corp.imagenSearch">
+            <forward name="imgModuloEstado" path="page.corp.imagenSearch" />
+            <forward name="imgSearchList" path="page.corp.imagenSearch" />
+            <forward name="imagenSearch" path="page.corp.imagenSearch" />
+           <forward name="imgNew" path="/actualidadLaboralSearch.do?event=actualidadLaboralSearch" />  <!--  esto se utiliza para que no haya caidas inesperadas del grid despues de guardar -->
+           <forward name="error" path="page.corp.error" /> 
+        </action>
+        
+         <!--  Nuevo Imagen -->
+        <action path="/imagenNew" 
+                type="action.ImagenAction"
+                parameter="event"
+                name="imagenForm"
+                validate="true"
+                scope="session"
+                input="page.corp.imagenNew">
+            <forward name="imgNew" path="page.corp.imagenNew" />
+            <forward name="imagenSearch" path="page.corp.imagenSearch"/>  
+            <forward name="error" path="page.corp.error" />   
+        </action>
+        
+        <!--  Nuevo Actualizar -->
+        <action path="/imagenUpdate" 
+                type="action.ImagenAction"
+                parameter="event"
+                name="imagenForm"
+                validate="true"
+                scope="session"
+                input="page.corp.imagenUpdate">
+            <forward name="imgUpdate" path="page.corp.imagenUpdate" />
+            <forward name="imagenSearch" path="page.corp.imagenSearch"/>
+            <forward name="error" path="page.corp.error" />     
+        </action>
+        
+        <!--  Imagen Emergente Seleccionar -->
+        <action path="/imagenSeleccionar" 
+                type="action.ImagenAction"
+                parameter="event"
+                name="imagenForm"
+                validate="true"
+                scope="session"
+                input="page.imagenSeleccionar">
+            <forward name="imgSelect" path="page.imagenSeleccionar" />   
+            <forward name="imgModCamList" path="page.imagenSeleccionar" /> 
+        </action>
+        
+         <!-- 9. para el matenimiento de criterio y demas opciones --> 
+        <!--  publicado criterio tribunal constitucionasl -->
+        <action path="/criterioPublic" 
+                type="action.CriterioAction"
+                parameter="event"
+                name="actualidadLaboralForm"
+                validate="false"
+                scope="session"
+                input="page.criterioPublic">
+            <forward name="criterioPublic" path="page.criterioPublic" />  
+        </action>
+
+     
+     <!-- 10. para el matenimiento de tb_gestionpersonas y demas opciones --> 
+        <!--  publicado gestion personas -->
+        <action path="/gestionPersonasPublic" 
+                type="action.GestionPersonasAction"
+                parameter="event"
+                name="actualidadLaboralForm"
+                validate="false"
+                scope="session"
+                input="page.gestionPersonasPublic">
+            <forward name="gestionPersonasPublic" path="page.gestionPersonasPublic" />  
+        </action>
+     
+    
+          <!-- 11. para el matenimiento de tb_actualidadLaboral y demas opciones --> 
+        <!--  Buscar Boletin -->
+        <action path="/boletinSearch" 
+                type="action.BoletinAction"
+                parameter="event"
+                name="boletinForm"
+                validate="false"
+                scope="session"
+                input="page.boletinSearch">
+            <forward name="bolModuloEstado" path="page.boletinSearch" />
+            <forward name="bolSearchList" path="page.boletinSearch" />
+            <forward name="boletinSearch" path="/boletinSearch.do?event=boletinSearch" />
+           <forward name="bolNew" path="/boletinSearch.do?event=boletinSearch" />  <!--  esto se utiliza para que no haya caidas inesperadas del grid despues de guardar -->
+        </action>
+        
+         <!--  Nuevo Boletin -->
+        <action path="/boletinNew" 
+                type="action.BoletinAction"
+                parameter="event"
+                name="boletinForm"
+                validate="true"
+                scope="session"
+                input="page.boletinNew">
+            <forward name="bolNew" path="page.boletinNew" />
+            <forward name="boletinSearch" path="page.boletinSearch"/>    
+        </action>
+        <!--  Actualizar Boletin -->
+        <action path="/boletinUpdate" 
+                type="action.BoletinAction"
+                parameter="event"
+                name="boletinForm"
+                validate="true"
+                scope="session"
+                input="page.boletinUpdate">
+            <forward name="bolUpdate" path="page.boletinUpdate" />  
+            <forward name="boletinSearch" path="page.boletinSearch"/>   
+        </action>
+        
+        <!--  Actualizar Boletin -->
+        <action path="/boletinAnteriores" 
+                type="action.BoletinAction"
+                parameter="event"
+                name="boletinForm"
+                validate="true"
+                scope="session"
+                input="page.boletinAnteriores">
+            <forward name="bolAnteriores" path="page.boletinAnteriores" />    
+        </action>
+        <!-- 12. Para todas las opciones de Regulacion Laboral --> 
+        <!--  Nueva Regulacion Laboral -->
+        <action path="/regulacionLaboralPublic" 
+                type="action.RegulacionLaboralAction"
+                parameter="event"
+                name="actualidadLaboralForm"
+                validate="true"
+                scope="session"
+                input="page.regulacionLaboralPublic">
+            <forward name="regulacionLaboralPublic" path="page.regulacionLaboralPublic" />  
+        </action>
+        
+         <!-- 13. Para todas las opciones de notas de prensa --> 
+        <!--  Nueva nota de prensa -->
+        <action path="/notasPrensaPublic" 
+                type="action.NotasPrensaAction"
+                parameter="event"
+                name="actualidadLaboralForm"
+                validate="true"
+                scope="session"
+                input="page.notasPrensaPublic">
+            <forward name="notasPrensaPublic" path="page.notasPrensaPublic" />  
+        </action>
+        
+        <!-- 14. Para todas las opciones de notas de prensa --> 
+        <!--  Nueva nota de prensa -->
+        <action path="/publicacionesPublic" 
+                type="action.PublicacionesAction"
+                parameter="event"
+                name="actualidadLaboralForm"
+                validate="true"
+                scope="session"
+                input="page.publicacionesPublic">
+            <forward name="publicacionesPublic" path="page.publicacionesPublic" />  
+        </action>
+        
+        
+        <!-- *************************************************** -->
+         <!-- *************************************************** -->
+         <!-- *************************************************** -->
+        <!-- 15. Para todas las opciones MenuNivel1 --> 
+        <!--  Buscar Menu Primer Nivel -->
+        <action path="/menunivel1Search" 
+                type="action.MenuNivel1Action"
+                parameter="event"
+                name="menunivel1Form"
+                validate="true"
+                scope="session"
+                input="page.corp.menunivel1Search">
+            <forward name="mecListSearch" path="page.corp.menunivel1Search" />
+            <forward name="error" path="page.corp.error" /> 
+            <forward name="mecMenu" path="page.corp.home"/> 
+        </action>
+        
+        <!--  Nuevo Menu Primer Nivel -->
+        <action path="/menunivel1New" 
+                type="action.MenuNivel1Action"
+                parameter="event"
+                name="menunivel1Form"
+                validate="false"
+                scope="session"
+                input="page.corp.menunivel1New">
+            <forward name="mecNew" path="page.corp.menunivel1New" />
+            <forward name="mecListSearch" path="page.corp.menunivel1Search" />
+            <forward name="error" path="page.corp.error" />  
+        </action>
+        
+        <!--  Actualizar Menu Primer Nivel -->
+        <action path="/menunivel1Update" 
+                type="action.MenuNivel1Action"
+                parameter="event"
+                name="menunivel1Form"
+                validate="false"
+                scope="session"
+                input="page.corp.menunivel1Update">
+            <forward name="mecUpdate" path="page.corp.menunivel1Update" />
+            <forward name="mecListSearch" path="page.corp.menunivel1Search" />
+            <forward name="error" path="page.corp.error" />  
+        </action>
+        <!--  Actualizar Menu Primer Nivel -->
+        <action path="/menunivel1ViewCorp" 
+                type="action.MenuNivel1Action"
+                parameter="event"
+                name="menunivel1Form"
+                validate="false"
+                scope="session"
+                input="page.corp.menunivel1ViewCorp">
+            <forward name="mecViewCorp" path="page.corp.menunivel1ViewCorp" />
+            <forward name="mecListSearch" path="page.corp.menunivel1Search" />
+            <forward name="error" path="page.corp.error" />  
+        </action>
+        
+         <!-- *******fin Para todas las opciones MenuNivel1****** --> 
+         <!-- *************************************************** -->
+         <!-- *************************************************** -->
+         <!-- *************************************************** -->
+         
+          <!-- *************************************************** -->
+         <!-- *************************************************** -->
+         <!-- *************************************************** -->
+        <!-- 16. Para todas las opciones MenuNivel2 --> 
+        <!--  Buscar Menu Segundo Nivel -->
+        <action path="/menunivel2Search" 
+                type="action.MenuNivel2Action"
+                parameter="event"
+                name="menunivel2Form"
+                validate="false"
+                scope="session"
+                input="page.corp.menunivel2Search">
+            <forward name="medListSearch" path="page.corp.menunivel2Search" />
+            <forward name="error" path="page.corp.error" />  
+        </action>
+        
+        <!--  Nuevo Menu Segundo Nivel -->
+        <action path="/menunivel2New" 
+                type="action.MenuNivel2Action"
+                parameter="event"
+                name="menunivel2Form"
+                validate="false"
+                scope="session"
+                input="page.corp.menunivel2New">
+            <forward name="medNew" path="page.corp.menunivel2New" />
+            <forward name="medListSearch" path="page.corp.menunivel2Search" />
+            <forward name="error" path="page.corp.error" />  
+        </action>
+        
+        <!--  Actualizar Menu Segundo Nivel -->
+        <action path="/menunivel2Update" 
+                type="action.MenuNivel2Action"
+                parameter="event"
+                name="menunivel2Form"
+                validate="false"
+                scope="session"
+                input="page.corp.menunivel2Update">
+            <forward name="medUpdate" path="page.corp.menunivel2Update" />
+            <forward name="medListSearch" path="page.corp.menunivel2Search" />
+            <forward name="error" path="page.corp.error" />  
+        </action>
+        <!--  Visor Menu Segundo Nivel -->
+        <action path="/menunivel2ViewCorp" 
+                type="action.MenuNivel2Action"
+                parameter="event"
+                name="menunivel2Form"
+                validate="false"
+                scope="session"
+                input="page.corp.menunivel2ViewCorp">
+            <forward name="medViewCorp" path="page.corp.menunivel2ViewCorp" />
+            <forward name="medListSearch" path="page.corp.menunivel2Search" />
+            <forward name="error" path="page.corp.error" />  
+        </action>
+        
+         <!-- *******fin Para todas las opciones MenuNivel1****** --> 
+         <!-- *************************************************** -->
+         <!-- *************************************************** -->
+         <!-- *************************************************** -->
+         
+         <!-- *************************************************** -->
+         <!-- *************************************************** -->
+         <!-- *************************************************** -->
+        <!-- 17. Para todas las opciones MenuNivel3 --> 
+        <!--  Buscar Menu Tercer Nivel -->
+        <action path="/menunivel3Search" 
+                type="action.MenuNivel3Action"
+                parameter="event"
+                name="menunivel3Form"
+                validate="false"
+                scope="session"
+                input="page.corp.menunivel3Search">
+            <forward name="metListSearch" path="page.corp.menunivel3Search" />
+            <forward name="error" path="page.corp.error" />  
+            
+        </action>
+        
+        <!--  Nuevo Menu Tercer Nivel -->
+        <action path="/menunivel3New" 
+                type="action.MenuNivel3Action"
+                parameter="event"
+                name="menunivel3Form"
+                validate="false"
+                scope="session"
+                input="page.corp.menunivel3New">
+            <forward name="metNew" path="page.corp.menunivel3New" />
+            <forward name="metListSearch" path="page.corp.menunivel3Search" />
+            <forward name="error" path="page.corp.error" />  
+        </action>
+        
+        <!--  Actualizar Menu Tercer Nivel -->
+        <action path="/menunivel3Update" 
+                type="action.MenuNivel3Action"
+                parameter="event"
+                name="menunivel3Form"
+                validate="false"
+                scope="session"
+                input="page.corp.menunivel3Update">
+            <forward name="metUpdate" path="page.corp.menunivel3Update" />
+            <forward name="metListSearch" path="page.corp.menunivel3Search" />
+            <forward name="error" path="page.corp.error" />  
+        </action>
+        <!--  Visor Menu Tercer Nivel -->
+        <action path="/menunivel3ViewCorp" 
+                type="action.MenuNivel3Action"
+                parameter="event"
+                name="menunivel3Form"
+                validate="false"
+                scope="session"
+                input="page.corp.menunivel3ViewCorp">
+            <forward name="metViewCorp" path="page.corp.menunivel3ViewCorp" />
+            <forward name="metListSearch" path="page.corp.menunivel3Search" />
+            <forward name="error" path="page.corp.error" />  
+        </action>
+        
+         <!-- *******fin Para todas las opciones MenuNivel3****** --> 
+         <!-- *************************************************** -->
+         <!-- *************************************************** -->
+         <!-- *************************************************** -->
+         
+         <!-- *************************************************** -->
+         <!-- *************************************************** -->
+         <!-- *************************************************** -->
+        <!-- 18. Para todas las opciones Contactenos --> 
+        <!--  Buscar Contactenos -->
+        <action path="/contactenosSearch" 
+                type="action.ContactenosAction"
+                parameter="event"
+                name="contactenosForm"
+                validate="false"
+                scope="session"
+                input="page.corp.contactenosSearch">
+            <forward name="conListSearch" path="page.corp.contactenosSearch" />
+            <forward name="error" path="page.corp.error" />  
+            
+        </action>
+        
+        <!--  Nuevo Contactenos -->
+        <action path="/contactenosNew" 
+                type="action.ContactenosAction"
+                parameter="event"
+                name="contactenosForm"
+                validate="true"
+                scope="session"
+                input="page.corp.contactenosNew">
+            <forward name="conNew" path="page.corp.contactenosNew" />
+            <forward name="error" path="page.corp.error" />  
+        </action>
+        
+       
+        
+         <!-- *******fin Para todas las opciones MenuNivel3****** --> 
+         <!-- *************************************************** -->
+         <!-- *************************************************** -->
+         <!-- *************************************************** -->
+         
+         <!-- *************************************************** -->
+         <!-- *************************************************** -->
+         <!-- *************************************************** -->
+        <!-- 18. Para todas las opciones Contactenos --> 
+        <!--  Buscar Contactenos -->
+        <action path="/tcnosotrosSearch" 
+                type="action.TrabajaNosotrosAction"
+                parameter="event"
+                name="trabajanosotrosForm"
+                validate="false"
+                scope="session"
+                input="page.corp.tcnosotrosSearch">
+            <forward name="tcnListSearch" path="page.corp.tcnosotrosSearch" />
+            <forward name="error" path="page.corp.error" />  
+            <forward name="homeCorp" path="/menunivel1Search.do?event=mecMenu"/>
+            
+        </action>
+        
+        <!--  Nuevo Contactenos -->
+        <action path="/tcnosotrosNew" 
+                type="action.TrabajaNosotrosAction"
+                parameter="event"
+                name="trabajanosotrosForm"
+                validate="true"
+                scope="session"
+                input="page.corp.tcnosotrosNew">
+            <forward name="tcnNew" path="page.corp.tcnosotrosNew" />
+            <forward name="error" path="page.corp.error" />  
+        </action>
+        
+        <!-- *************************************************** -->
+         <!-- *************************************************** -->
+         <!-- *************************************************** -->
+        <!-- 19. Para todas las opciones Persona --> 
+        <!--  Buscar Persona -->
+
+        
+        <!--  Nueva Persona y Usuario -->
+        <action path="/personaNew" 
+                type="action.PersonaAction"
+                parameter="event"
+                name="personaForm"
+                validate="true"
+                scope="session"
+                input="page.corp.personaNew">
+            <forward name="perNew" path="page.corp.personaNew" />
+            <forward name="error" path="page.corp.error" />  
+        </action>
+        
+       <action
+			path="/RegisterUserPage"
+			type="action.PersonaAction"
+                parameter="event"
+                name="personaForm"
+                validate="false"
+                scope="session"
+                input="page.corp.personaNew">
+			<forward name="perNew" path="page.corp.personaNew" />
+            <forward name="error" path="page.corp.error" /> 
+	    </action>
+        
+         <!-- *******fin Para todas las opciones MenuNivel3****** --> 
+         <!-- *************************************************** -->
+         <!-- *************************************************** -->
+         <!-- *************************************************** -->
+    </action-mappings>
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+     <message-resources parameter="displaytag"/>
+	<!--  Tiles plugin -->
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config"
+			          value="/WEB-INF/tld-diehl/tiles-defs.xml" />
+ 		<set-property property="definitions-debug" value="2" />
+ 		<set-property property="definitions-parser-details" value="2" />
+ 		<set-property property="definitions-parser-validate" value="true" />
+	</plug-in>
+	
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			          value="/WEB-INF/tld-diehl/validator-rules.xml,/WEB-INF/tld-diehl/validation.xml" />
+			          <set-property property="definitions-parser-validate" value="true" />
+			          
+	</plug-in>
+
+</struts-config>

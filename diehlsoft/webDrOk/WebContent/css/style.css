@@ -1,0 +1,506 @@
+/* ==================================================
+   CSS Imports
+================================================== */
+
+@import url("reset.css");
+@import url("superslides.css");
+@import url("columns.css");
+
+/* ==================================================
+   Icon Fonts
+================================================== */
+
+@import url("fonts/fontawesome/font-awesome.css");
+
+/* ==================================================
+   Google Fonts
+================================================== */
+
+@import url("http://fonts.googleapis.com/css?family=Ruda:400,700,900");
+@import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+/* ==================================================
+   Global Styles
+================================================== */
+
+*
+{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html
+{
+	height: 100%;
+	overflow: auto;
+	
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body
+{
+	font-family: "Ruda", Arial, Verdana, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #444;
+	background: #222;
+	z-index: auto;
+	
+	text-rendering: optimizeLegibility;
+	vertical-align: baseline;
+}
+
+::selection
+{
+	background: #16a085;
+	color: #FFF;
+}
+
+::-moz-selection
+{
+	background: #16a085;
+	color: #FFF;
+}
+
+a
+{
+	color: #16a085;
+	text-decoration: none;
+}
+
+a:hover
+{
+	color: #222;
+}
+
+hr{
+	background: #16a085;
+}
+
+/* ==================================================
+   Images
+================================================== */
+
+img
+{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+}
+
+	img.imgright
+	{
+		display: block;
+		float: right;
+		width: 100%;
+		max-width: 300px;
+		margin: 0 0 20px 20px;
+	}
+	
+	img.imgleft
+	{
+		display: block;
+		float: left;
+		width: 100%;
+		max-width: 300px;
+		margin: 0 20px 20px 0;
+	}
+	
+	img.imgrightcarnet
+	{
+		display: block;
+		float: right;
+		width: 100%;
+		max-width: 200px;
+		margin: 0 0 20px 20px;
+	}
+	
+	img.imgleftcarnet
+	{
+		display: block;
+		float: left;
+		width: 100%;
+		max-width: 200px;
+		margin: 0 20px 20px 0;
+	}
+
+/* ==================================================
+   Colours
+================================================== */
+
+.bg1
+{
+	background: #333;
+}
+
+.bg2
+{
+	background: #FFF;
+}
+
+/* ==================================================
+   Layout Styles
+================================================== */
+
+#fixedtop
+{
+	position: fixed;
+	z-index: 100;
+	
+	-webkit-transition: background 0.1s linear;
+	-moz-transition: background 0.1s linear;
+	-o-transition: background 0.1s linear;
+	transition: background 0.1s linear;
+}
+
+	#fixedtop.bgcolour,
+	.menuopened #fixedtop
+	{
+		background: #333;
+	}
+
+.containerfull
+{
+	width: 100%;
+	min-width: 280px;
+	line-height: 26px;
+}
+
+	.containerfull .bodycontainer
+	{
+		width: 100%;
+	}
+	
+.container
+{
+	width: 100%;
+	padding: 0 30px;
+	min-width: 280px;
+	line-height: 26px;
+}
+
+	.container .bodycontainer
+	{
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1140px;
+	}
+
+.containerFooter
+{
+	width: 100%;
+	padding: 0 30px;
+	min-width: 280px;
+	line-height: 26px;
+	background: black;
+}
+
+	.containerFooter .bodycontainer
+	{
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1140px;
+	}
+	
+/* ==================================================
+   Sections
+================================================== */
+
+#topcont
+{
+	color: #FFF;
+	padding: 30px 0;
+	
+	-webkit-transition: padding 0.1s linear;
+	-moz-transition: padding 0.1s linear;
+	-o-transition: padding 0.1s linear;
+	transition: padding 0.1s linear;
+}
+
+	.bgcolour #topcont
+	{
+		padding: 20px 0;
+	}
+
+		#topcont #topleft
+		{
+			float: left;
+		}
+		
+			#topcont #topleft a
+			{
+				float: left;
+			}
+			
+				#topcont #topleft a img
+				{
+					display: block;
+					width: 100%;
+					max-width: 100px;
+				}
+			
+		#topcont #topright
+		{
+			float: right;
+		}
+
+#headercont
+{
+	
+}
+
+#maincont
+{
+	width: 100%;
+	padding: 45px 0;
+	background: #FFF url("../images/bg-maincont.png") repeat-y 70% 0;
+}
+
+	#maincont p
+	{
+		margin: 0 0 20px 0;
+	}
+	
+		#maincont p:last-child
+		{
+			margin: 0 0 20px 0;
+		}
+		
+	#maincont strong
+	{
+		font-weight: 700;
+	}
+
+	#maincont h1, #maincont h2, #maincont h3, #maincont h4, #maincont h5, #maincont h6
+	{
+		margin: 0 0 20px 0;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: -0.5px;
+	}
+	
+		#maincont h1
+		{
+			font-size: 32px;
+			line-height: 32px;
+		}
+		
+		#maincont h2
+		{
+			font-size: 26px;
+			line-height: 26px;
+		}
+		
+		#maincont h3
+		{
+			font-size: 24px;
+			line-height: 24px;
+		}
+		
+		#maincont hr
+		{
+			clear: both;
+			float: left;
+			width: 100%;
+			padding: 0;
+			margin: 0 0 20px 0;
+			border: none;
+			border-top: 1px dotted #CCC;
+		}
+	
+			#maincont #mainleft
+			{
+				float: left;
+				width: 70%;
+				padding: 0 30px 0 0;
+			}
+			
+			#maincont #mainright
+			{
+				float: left;
+				width: 30%;
+				padding: 0 0 0 30px;
+			}
+
+#footercont
+{
+	padding: 50px 0;
+	color: #999;
+	color: rgba(255, 255, 255, 0.4);
+	background: black;
+}
+
+	#footercont .column-10
+	{
+		text-align: right;
+	}
+
+	#footercont p
+	{
+		margin: 0;
+	}
+
+	#footercont a
+	{
+		color: #AAA;
+	}
+	
+	#footercont a:hover
+	{
+		color: #16a085;
+	}
+	
+		#footercont a.scrolltop
+		{
+			font-size: 38px;
+		}
+	
+		#footercont #socialmedia ul
+		{
+			margin: 0 0 20px 0;
+		}
+
+		#footercont #socialmedia ul li
+		{
+			display: inline-block;
+			list-style-type: none;
+			margin: 0 12px 0 0;
+			padding: 0;
+		}
+
+			#footercont #socialmedia ul li a
+			{
+				font-size: 27px;
+			}
+         
+         #footercont h1
+		{
+			font-size: 32px;
+			line-height: 32px;
+		}
+		
+		#footercont h2
+		{
+			font-size: 26px;
+			line-height: 26px;
+		}
+		
+		#footercont h3
+		{
+			font-size: 24px;
+			line-height: 24px;
+		}
+		
+		#footercont h1, #footercont h2, #footercont h3, #footercont h4, #footercont h5, #footercont h6
+	{
+		margin: 0 0 20px 0;
+		font-weight: 400;
+		color: #1ABC9C;
+		text-transform: uppercase;
+		letter-spacing: -0.5px;
+	}
+	   
+	   #footercont h6 {
+	   
+	   text-align: right;
+	   }
+/* ==================================================
+   Responsive Media Queries - Tablets
+================================================== */
+
+@media screen and (max-width: 768px)
+{
+
+	img.imgright
+	{
+		float: none;
+		width: 100%;
+		max-width: 380px;
+		margin: 0 0 20px 0;
+	}
+	
+	img.imgleft
+	{
+		float: none;
+		width: 100%;
+		max-width: 380px;
+		margin: 0 0 20px 0;
+	}
+	
+	.container
+	{
+		padding: 0 25px;
+	}
+	
+	#topcont #topleft
+	{
+		float: left;
+		width: 100%;
+	}
+		
+	#topcont #topright
+	{
+		float: left;
+		width: 100%;
+	}
+	
+	#maincont
+	{
+		background-image: none;
+	}
+	
+		#maincont #mainleft
+		{
+			float: left;
+			width: 100%;
+			padding: 0 0 30px 0;
+		}
+		
+		#maincont #mainright
+		{
+			float: left;
+			width: 100%;
+			padding: 30px 0;
+			border-top: 1px dotted #CCC;
+		}
+		
+	#footercont
+	{
+		text-align: left;
+	}
+	
+		#footercont .column-10
+		{
+			text-align: left;
+			margin-top: 20px;
+		}
+	
+		#footercont a.scrolltop
+		{
+			display: block;
+			margin: 0;
+		}
+		
+		#footercont #socialmedia ul li
+		{
+			margin: 0 10px 0 0;
+		}
+
+}
+
+/* ==================================================
+   Responsive Media Queries - Mobiles
+================================================== */
+
+@media screen and (max-width: 480px)
+{		
+
+	.container
+	{
+		padding: 0 20px;
+	}
+
+}
+

@@ -1,0 +1,604 @@
+h1{
+   padding: 10px;
+}
+
+h3 {
+	color: #1ABC9C;
+}
+
+h4 {
+	color: #1ABC9C;
+}
+
+.img100 {
+    max-width: 70%;
+    height: auto;
+}
+
+p {
+	text-align: justify;
+}
+
+span.generalErrors {
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color:#FF7F7F;
+	float: right;
+}
+
+/*estilos para el boton animado*/
+.button{
+	font-family:  Arial, Helvetica, sans-serif;
+	/* A semi-transparent text shadow */
+	text-shadow:1px 1px 0 rgba(255,255,255,0.4);
+	
+	/* Overriding the default underline styling of the links */
+	text-decoration:none !important;
+	white-space:nowrap;
+	width: 15%;
+	min-width:200px;
+	
+	display:inline-block;
+	vertical-align:baseline;
+	position:relative;
+	cursor:pointer;
+	padding:10px 10px 10px 10px;
+	
+	margin:1px;
+	
+	background-repeat:no-repeat;
+
+	/* The following two rules are fallbacks, in case
+	   the browser does not support multiple backgrounds. */
+
+	background-position:bottom left;
+	background-image:url(../image/button_bg.png);
+	
+	/* Multiple backgrounds version. The background images
+	   are defined individually in color classes */
+	
+	background-position:bottom left, top right, 0 0, 0 0;
+	background-clip:border-box;
+	
+	/* Applying a default border raidus of 8px */
+	
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	
+	/* A 1px highlight inside of the button */
+	
+	-moz-box-shadow:0 0 1px #fff inset;
+	-webkit-box-shadow:0 0 1px #fff inset;
+	box-shadow:0 0 1px #fff inset;
+	
+	/* Animating the background positions with CSS3 */
+	/* Currently works only in Safari/Chrome */
+	
+	-webkit-transition:background-position 1s;
+	-moz-transition:background-position 1s;
+	transition:background-position 1s;
+}
+
+.button:hover{
+	
+	/* The first rule is a fallback, in case the browser
+	   does not support multiple backgrounds
+	*/
+	
+	background-position:top left;
+	background-position:top left, bottom right, 0 0, 0 0;
+}
+
+.button:active{
+	/* Moving the button 1px to the bottom when clicked */
+	bottom:-1px;
+}
+
+/* The three buttons sizes */
+
+.button.big		{ font-size:17px;}
+.button.medium	{ font-size:13px;}
+.button.small	{ font-size:9px;}
+
+/* A more rounded button */
+
+.button.rounded{
+	-moz-border-radius:4em;
+	-webkit-border-radius:4em;
+	border-radius:4em;
+}
+
+
+/* Green Button */
+
+.green.button{
+	color:#ffffff!important;
+	border:1px solid #204A71!important;	
+	background-color: #204A71;
+	
+}
+
+.green.button:hover{
+	background-color:#204A71;
+
+}
+/***** fin del boton animado ********************************/
+/**********************************************************/
+/**********************************************************/
+
+/******************************************************************/
+/*****************************************************************/
+/*********Incio de los estilos para el form ***********/
+/* Makes responsive fields. Sets size and field alignment.*/
+
+fieldset {
+  padding: 10px;	
+  border: 1px solid #204A71;
+  -moz-border-radius:1em;
+	-webkit-border-radius:1em;
+	border-radius:1em;
+}
+
+fieldset.error{
+	background: black;
+	width: 100%;
+	max-width: 380px;
+	height: 100%;
+	min-height: 173px;
+	vertical-align: middle;
+	position: relative;
+	font-size: 30px;
+	padding-top: 70px;
+	text-align: center;
+	
+}
+
+fieldset.borde{
+	border:8px groove #ccc;
+}
+
+legend{
+	color:#1ABC9C;
+	font-family: "Source Sans Pro", Arial, Verdana, Helvetica, sans-serif;
+	padding: 8px 8px 8px 8px;
+	border-radius:5px;
+	font-size: 14px;
+	
+}
+
+.mainForm {
+	width: 100%;
+	max-width: 100%;
+}
+
+.cbp-mc-form:before, 
+.cbp-mc-form:after { 
+	content: " "; display: table; 
+}
+
+.cbp-mc-form:after { 
+	clear: both; 
+}
+
+.cbp-mc-column100 {
+	width: 100%;
+	padding: 20px 20px 20px 20px;
+	float: left;
+}
+.cbp-mc-column75 {
+	width: 75%;
+	padding: 20px 20px 20px 20px;
+	float: left;
+}
+
+.cbp-mc-column60 {
+	width: 60%;
+	padding: 20px 20px 20px 20px;
+	margin-left:75px;
+	margin-right:75px;
+	float: left;
+}
+
+.cbp-mc-column50 {
+	width: 50%;
+	padding: 20px 20px 20px 20px;
+	float: left;
+}
+
+.cbp-mc-column25 {
+	width: 25%;
+	padding: 20px 20px 20px 20px;
+	float: left;
+}
+
+.cbp-mc-column33 {
+	width: 33.3%;
+	padding: 20px 20px 20px 20px;
+	float: left;
+}
+
+.cbp-mc-form label {
+	display: block;
+	padding: 20px 20px 20px 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size:12px;
+	cursor: pointer;
+	color: #204A71;
+  font-family: "Source Sans Pro", Arial, Verdana, Helvetica, sans-serif;
+}
+
+.cbp-mc-form input,
+.cbp-mc-form textarea,
+.cbp-mc-form select{
+	font-family: "Source Sans Pro", Arial, Verdana, Helvetica, sans-serif;
+	line-height: 1.5;
+	padding: 8px 8px 8px 8px;
+	border-radius:5px;
+	display: block;
+	width: 100%;
+	font-size: 14px;
+	background-color: #FFFFFF;
+	color: #383838;
+}
+
+.cbp-mc-form input,
+.cbp-mc-form textarea,
+.cbp-mc-form select {
+	border: 1px solid #204A71;
+}
+
+.cbp-mc-form textarea {
+	min-height: 150px;
+}
+
+.cbp-mc-form input:focus,
+.cbp-mc-form textarea:focus,
+.cbp-mc-form label:active + input,
+.cbp-mc-form label:active + textarea {
+	outline: none;
+	border: 1px solid #204A71;
+}
+
+.cbp-mc-form select:focus {
+	outline: none;
+}
+
+@media only screen and (max-width: 760px) {
+	.cbp-mc-column100 {
+		width: 100%;
+	}
+	.cbp-mc-column100:nth-child(3) {
+		width: 100%;
+	}
+	.cbp-mc-column75 {
+		width: 100%;
+	}
+	.cbp-mc-column75:nth-child(3) {
+		width: 100%;
+	}
+	
+	.cbp-mc-column60 {
+		width: 100%;
+		margin-left:1px;
+	    margin-right:1px;
+	}
+	.cbp-mc-column60:nth-child(3) {
+		width: 100%;
+		margin-left:1px;
+	    margin-right:1px;
+	}
+	
+	.cbp-mc-column50 {
+		width: 100%;
+	}
+	.cbp-mc-column50:nth-child(3) {
+		width: 100%;
+	}
+	
+	.cbp-mc-column25 {
+		width: 100%;
+	}
+	.cbp-mc-column25:nth-child(3) {
+		width: 100%;
+	}
+	
+	.cbp-mc-column33 {
+		width: 100%;
+	}
+	.cbp-mc-column33:nth-child(3) {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.cbp-mc-column75 {
+		width: 100%;
+		padding: 10px;
+	}
+	.cbp-mc-column100 {
+		width: 100%;
+		padding: 20px 20px 20px 20px;
+	}
+	.cbp-mc-column50 {
+		width: 100%;
+		padding: 20px 20px 20px 20px;
+	}
+	.cbp-mc-column60 {
+		width: 100%;
+		padding: 10px;
+		margin-left:1px;
+	    margin-right:1px;
+	}
+	
+	.cbp-mc-column25 {
+		width: 100%;
+		padding: 20px 20px 20px 20px;
+	}
+	
+	.cbp-mc-column33 {
+		width: 100%;
+		padding: 20px 20px 20px 20px;
+	}
+}
+
+/***************************fin del formulario responsive************************************************/
+/********************************************************************************************************/
+/********************************************************************************************************/
+/********************************************************************************************************/
+
+
+
+/********************************************************************************************************/
+/********************************************************************************************************/
+/********************************************************************************************************/
+/***************************Inicio de CSS para Tabla responsive*******************************************/
+
+.bodyDisplay{
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+-moz-box-shadow: 0px 0px 10px #000000;
+-webkit-box-shadow: 0px 0px 10px #000000;
+box-shadow: 0px 0px 10px #000000;
+
+background: #D4FFFF;
+	filter: progid: DXImageTransform.Microsoft.gradient(GradientType = 1, 
+		startColorstr = '#FFFFF1', endColorstr = '#D4FFFF');
+	-ms-filter: progid: DXImageTransform.Microsoft.gradient(GradientType = 1, 
+		startColorstr = '#FFFFF1', endColorstr = '#D4FFFF');
+	background-image: -moz-linear-gradient(210deg, #D4FFFF, #FFFFF1);
+	background-image: -ms-linear-gradient(210deg, #D4FFFF, #FFFFF1);
+	background-image: -o-linear-gradient(210deg, #D4FFFF, #FFFFF1);
+	background-image: -webkit-gradient(linear, 
+		right top, left bottom, from(#D4FFFF), to(#FFFFF1));
+	background-image: -webkit-linear-gradient(210deg, #D4FFFF, #FFFFF1);
+	background-image: linear-gradient(210deg, #D4FFFF, #FFFFF1);
+
+-moz-background-clip: padding;
+-webkit-background-clip: padding-box;
+background-clip: padding-box;
+/*Use "background-clip: padding-box" when using rounded corners to avoid the gradient bleeding through the corners*/
+/*--IE9 WILL PLACE THE FILTER ON TOP OF THE ROUNDED CORNERS--*/
+padding: 20px;
+}
+
+
+.tableD {
+	width: 100%;
+}
+
+th,td {
+	/*padding: 2px 4px 2px 4px !important;*/
+	text-align: left;
+	vertical-align: middle;
+}
+
+th{
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    border: 1px;
+
+}
+
+thead tr,th {
+border:2px solid #D4FFFF;
+
+    background: #D4FFFF;
+	filter: progid: DXImageTransform.Microsoft.gradient(GradientType = 1, 
+		startColorstr = '#FFFFF1', endColorstr = '#D4FFFF');
+	-ms-filter: progid: DXImageTransform.Microsoft.gradient(GradientType = 1, 
+		startColorstr = '#FFFFF1', endColorstr = '#D4FFFF');
+	background-image: -moz-linear-gradient(210deg, #D4FFFF, #FFFFF1);
+	background-image: -ms-linear-gradient(210deg, #D4FFFF, #FFFFF1);
+	background-image: -o-linear-gradient(210deg, #D4FFFF, #FFFFF1);
+	background-image: -webkit-gradient(linear, 
+		right top, left bottom, from(#D4FFFF), to(#FFFFF1));
+	background-image: -webkit-linear-gradient(210deg, #D4FFFF, #FFFFF1);
+	background-image: linear-gradient(210deg, #D4FFFF, #FFFFF1);
+
+}
+
+.even td {
+border:2px solid #D4FFFF;
+
+}
+
+.odd td {
+border:2px solid #D4FFFF;
+
+}
+
+th.sorted {
+    background: #FFFFF1;
+	filter: progid: DXImageTransform.Microsoft.gradient(GradientType = 1, 
+		startColorstr = '#D4FFFF', endColorstr = '#FFFFF1');
+	-ms-filter: progid: DXImageTransform.Microsoft.gradient(GradientType = 1, 
+		startColorstr = '#D4FFFF', endColorstr = '#FFFFF1');
+	background-image: -moz-linear-gradient(210deg, #FFFFF1, #D4FFFF);
+	background-image: -ms-linear-gradient(210deg, #FFFFF1, #D4FFFF);
+	background-image: -o-linear-gradient(210deg, #FFFFF1, #D4FFFF);
+	background-image: -webkit-gradient(linear, 
+		right top, left bottom, from(#FFFFF1), to(#D4FFFF));
+	background-image: -webkit-linear-gradient(210deg, #FFFFF1, #D4FFFF);
+	background-image: linear-gradient(210deg, #FFFFF1, #D4FFFF);
+
+}
+
+th a,th a:visited {
+		color: #000000;
+		
+}
+
+th a:hover {
+	text-decoration: none;
+	color: #4689a7;
+    
+}
+
+th.sorted a,th.sortable a {
+	background-position: right;
+	/*display: block;
+	width: 100%;*/
+
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+
+}
+
+th.sortable a {
+	background-image: url(../image/arrow_off.png);
+    background-repeat: no-repeat;
+    text-decoration:none;
+
+}
+
+th.order1 a {
+	background-image: url(../image/arrow_down.png);
+	background-repeat: no-repeat;
+	text-decoration:none;
+}
+
+th.order2 a {
+	background-image: url(../image/arrow_up.png);
+    background-repeat: no-repeat;
+    text-decoration:none;
+}
+
+tr.odd {
+	background-color: #ededed;
+	color: #000000;
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+.tableD tbody tr:hover{
+	background-color: #D4FFFF;
+	/*
+      -moz-box-shadow: 0px 0px 20px #0099CC; 
+      -webkit-box-shadow: 0px 0px 20px #0099CC; 
+      box-shadow: 0px 0px 20px #0099CC;
+      
+      padding: 10px;
+      border: 1px solid #0099CC;
+      */      
+	cursor:pointer;
+}
+
+tr.tableRowEven,tr.even {
+	background-color: #FFFFFF;
+	color: #000000;
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 10px;
+
+}
+
+.group-1 {
+    font-weight:bold;
+    /*padding-bottom:10px;
+    border-top:0px solid black;*/
+}
+.group-2 {
+    font-style:italic;
+    /*border-top: 0px solid black;*/
+
+}
+
+.grouped-table tr.even {
+    background-color: #ededed;
+}
+.grouped-table tr.odd {
+    background-color: #ededed;
+}
+
+span.pagebanner{
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: left;
+	color: #000000;
+}
+
+span.exportlinks{
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: left;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+span.selected_page{
+	font-family:  Arial, Helvetica, sans-serif;
+	text-align: center;
+	color: #FFFFFF;
+    font-weight: bold;
+    text-decoration:none;
+    
+    padding: 2px 5px 2px 5px;
+	margin-right: 2px;
+	border: 1px solid #7BC714;
+	font-weight: bold;
+	background-color: #7BC714;
+}
+
+a.page_link{
+	font-family:  Arial, Helvetica, sans-serif;
+	text-align: center;
+    padding: 2px 5px 2px 5px;
+	margin-right: 2px;
+	border: 1px solid #7BC714;
+	text-decoration: none; 
+	color: #FFFFFF;
+}
+
+a.paging{
+	font-family:  Arial, Helvetica, sans-serif;
+	text-align: center;
+    padding: 2px 5px 2px 5px;
+	margin-right: 2px;
+	border: 1px solid #7BC714;
+	text-decoration: none; 
+	color: #FFFFFF;
+}
+
+span.pagelinks{
+	float: right;
+	
+}
+
+/***************************fin de CSS para Tabla responsive*********************************************/
+/********************************************************************************************************/
+/********************************************************************************************************/
+/********************************************************************************************************/
+
+
+
+
+
+
+
+

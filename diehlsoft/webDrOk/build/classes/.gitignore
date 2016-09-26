@@ -1,0 +1,13 @@
+/SqlMapConfigApplication.properties
+/SqlMapConfigApplication.xml
+/action/
+/bean/
+/dao/
+/dbDAO/
+/displaytag.properties
+/displaytag_en_US.properties
+/displaytag_es_PE.properties
+/factories/
+/services/
+/sqlmaps/
+/util/

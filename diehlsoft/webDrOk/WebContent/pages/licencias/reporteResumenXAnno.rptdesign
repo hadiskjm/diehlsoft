@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v201405191524 Build &lt;4.4.0.v20140606-1451></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="AÑO" id="27">
+            <text-property name="helpText">2014</text-property>
+            <property name="valueType">dynamic</property>
+            <property name="dataSetName">DS_ANNO</property>
+            <expression name="valueExpr" type="javascript">dataSetRow["ANHO"]</expression>
+            <expression name="labelExpr" type="javascript">dataSetRow["ANHO"]</expression>
+            <expression name="sortByColumn">dataSetRow["ANHO"]</expression>
+            <property name="sortDirection">desc</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">false</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="DS_SHD" id="24">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">oracle.jdbc.OracleDriver</property>
+            <property name="odaURL">jdbc:oracle:thin:@localhost:1521:DIEHL</property>
+            <property name="odaUser">SHD</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">U0hE</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="DS_RESUMENXANNO" id="25">
+            <list-property name="columnHints"/>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">AÑO</property>
+                    <property name="paramName">AÑO</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">0</property>
+                    <property name="position">1</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">NOMBRE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">MES01</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">MES02</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">MES03</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">MES04</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">MES05</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">MES06</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">MES07</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">MES08</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">MES09</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">MES10</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">MES11</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">MES12</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">DS_SHD</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">NOMBRE</property>
+                    <property name="nativeName">NOMBRE</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">MES01</property>
+                    <property name="nativeName">MES01</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">MES02</property>
+                    <property name="nativeName">MES02</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">MES03</property>
+                    <property name="nativeName">MES03</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">MES04</property>
+                    <property name="nativeName">MES04</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">MES05</property>
+                    <property name="nativeName">MES05</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">MES06</property>
+                    <property name="nativeName">MES06</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">MES07</property>
+                    <property name="nativeName">MES07</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">MES08</property>
+                    <property name="nativeName">MES08</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">MES09</property>
+                    <property name="nativeName">MES09</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">MES10</property>
+                    <property name="nativeName">MES10</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">MES11</property>
+                    <property name="nativeName">MES11</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">MES12</property>
+                    <property name="nativeName">MES12</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[ 
+ SELECT DD.NOMBRE,COUNT(DD.MES01) MES01,
+ COUNT(DD.MES02) MES02,
+ COUNT(DD.MES03) MES03,
+ COUNT(DD.MES04) MES04,
+ COUNT(DD.MES05) MES05,
+ COUNT(DD.MES06) MES06,
+ COUNT(DD.MES07) MES07,
+ COUNT(DD.MES08) MES08,
+ COUNT(DD.MES09) MES09,
+ COUNT(DD.MES10) MES10,
+ COUNT(DD.MES11) MES11,
+ COUNT(DD.MES12) MES12
+ FROM (
+ SELECT DECODE(TO_CHAR(LDD.FECHAACTIVIDAD,'MM'),'01',LDD.FECHAACTIVIDAD) MES01,
+ DECODE(TO_CHAR(LDD.FECHAACTIVIDAD,'MM'),'02',LDD.FECHAACTIVIDAD) MES02,
+ DECODE(TO_CHAR(LDD.FECHAACTIVIDAD,'MM'),'03',LDD.FECHAACTIVIDAD) MES03,
+ DECODE(TO_CHAR(LDD.FECHAACTIVIDAD,'MM'),'04',LDD.FECHAACTIVIDAD) MES04,
+ DECODE(TO_CHAR(LDD.FECHAACTIVIDAD,'MM'),'05',LDD.FECHAACTIVIDAD) MES05,
+ DECODE(TO_CHAR(LDD.FECHAACTIVIDAD,'MM'),'06',LDD.FECHAACTIVIDAD) MES06,
+ DECODE(TO_CHAR(LDD.FECHAACTIVIDAD,'MM'),'07',LDD.FECHAACTIVIDAD) MES07,
+ DECODE(TO_CHAR(LDD.FECHAACTIVIDAD,'MM'),'08',LDD.FECHAACTIVIDAD) MES08,
+ DECODE(TO_CHAR(LDD.FECHAACTIVIDAD,'MM'),'09',LDD.FECHAACTIVIDAD) MES09,
+ DECODE(TO_CHAR(LDD.FECHAACTIVIDAD,'MM'),'10',LDD.FECHAACTIVIDAD) MES10,
+ DECODE(TO_CHAR(LDD.FECHAACTIVIDAD,'MM'),'11',LDD.FECHAACTIVIDAD) MES11,
+ DECODE(TO_CHAR(LDD.FECHAACTIVIDAD,'MM'),'12',LDD.FECHAACTIVIDAD) MES12,
+ LDD.FECHAACTIVIDAD,LDD.PERIODO,TT.NOMBRE FROM LAW.LAW_DIASRESTANTES_DETALLE LDD,(
+ SELECT DISTINCT LD.CODIGO,LD.NOMBRE FROM LAW.LAW_DIASRESTANTES LD) TT
+ WHERE LDD.CODIGO=TT.CODIGO
+ AND LDD.ANHO=?
+ )DD
+ GROUP BY DD.NOMBRE
+ ORDER BY DD.NOMBRE ASC
+]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="DS_ANNO" id="26">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">ANHO</property>
+                    <text-property name="displayName">ANHO</text-property>
+                    <text-property name="heading">ANHO</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">ANHO</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">DS_SHD</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">ANHO</property>
+                    <property name="nativeName">ANHO</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT DISTINCT ANHO FROM LAW.LAW_DIASRESTANTES_DETALLE
+ORDER BY ANHO ASC]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ANHO</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>38</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ANHO</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ANHO</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="77">
+            <property name="width">100%</property>
+            <property name="dataSet">DS_RESUMENXANNO</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">NOMBRE</property>
+                    <text-property name="displayName">NOMBRE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NOMBRE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">MES01</property>
+                    <text-property name="displayName">MES01</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["MES01"]</expression>
+                    <property name="dataType">decimal</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">MES02</property>
+                    <text-property name="displayName">MES02</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["MES02"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">MES03</property>
+                    <text-property name="displayName">MES03</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["MES03"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">MES04</property>
+                    <text-property name="displayName">MES04</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["MES04"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">MES05</property>
+                    <text-property name="displayName">MES05</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["MES05"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">MES06</property>
+                    <text-property name="displayName">MES06</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["MES06"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">MES07</property>
+                    <text-property name="displayName">MES07</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["MES07"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">MES08</property>
+                    <text-property name="displayName">MES08</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["MES08"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">MES09</property>
+                    <text-property name="displayName">MES09</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["MES09"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">MES10</property>
+                    <text-property name="displayName">MES10</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["MES10"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">MES11</property>
+                    <text-property name="displayName">MES11</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["MES11"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">MES12</property>
+                    <text-property name="displayName">MES12</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["MES12"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+            <column id="120"/>
+            <column id="121"/>
+            <column id="122"/>
+            <column id="123"/>
+            <column id="124"/>
+            <column id="125"/>
+            <column id="126"/>
+            <column id="127"/>
+            <column id="128"/>
+            <column id="129"/>
+            <column id="130"/>
+            <column id="131"/>
+            <column id="132"/>
+            <header>
+                <row id="78">
+                    <property name="backgroundColor">#5B9BD5</property>
+                    <property name="color">#FFFFFF</property>
+                    <property name="borderBottomColor">#5B9BD5</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">medium</property>
+                    <property name="borderLeftColor">#5B9BD5</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">medium</property>
+                    <property name="borderRightColor">#5B9BD5</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">medium</property>
+                    <property name="borderTopColor">#5B9BD5</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">medium</property>
+                    <cell id="79">
+                        <property name="backgroundColor">#5B9BD5</property>
+                        <property name="color">#FFFFFF</property>
+                        <label id="133">
+                            <text-property name="text">NOMBRE</text-property>
+                        </label>
+                    </cell>
+                    <cell id="80">
+                        <property name="backgroundColor">#5B9BD5</property>
+                        <property name="color">#FFFFFF</property>
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <label id="135">
+                            <text-property name="text">ENERO</text-property>
+                        </label>
+                    </cell>
+                    <cell id="81">
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <label id="137">
+                            <text-property name="text">FEBRERO</text-property>
+                        </label>
+                    </cell>
+                    <cell id="82">
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <label id="139">
+                            <text-property name="text">MARZO</text-property>
+                        </label>
+                    </cell>
+                    <cell id="83">
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <label id="141">
+                            <text-property name="text">ABRIL</text-property>
+                        </label>
+                    </cell>
+                    <cell id="84">
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <label id="143">
+                            <text-property name="text">MAYO</text-property>
+                        </label>
+                    </cell>
+                    <cell id="85">
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <label id="145">
+                            <text-property name="text">JUNIO</text-property>
+                        </label>
+                    </cell>
+                    <cell id="86">
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <label id="147">
+                            <text-property name="text">JULIO</text-property>
+                        </label>
+                    </cell>
+                    <cell id="87">
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <label id="149">
+                            <text-property name="text">AGOSTO</text-property>
+                        </label>
+                    </cell>
+                    <cell id="88">
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <label id="151">
+                            <text-property name="text">SETIEMBRE</text-property>
+                        </label>
+                    </cell>
+                    <cell id="89">
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <label id="153">
+                            <text-property name="text">OCTUBRE</text-property>
+                        </label>
+                    </cell>
+                    <cell id="90">
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <label id="155">
+                            <text-property name="text">NOVIEMBRE</text-property>
+                        </label>
+                    </cell>
+                    <cell id="91">
+                        <label id="157">
+                            <text-property name="text">DICIEMBRE</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="92">
+                    <property name="borderBottomColor">#5B9BD5</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">medium</property>
+                    <property name="borderLeftColor">#5B9BD5</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">medium</property>
+                    <property name="borderRightColor">#5B9BD5</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">medium</property>
+                    <property name="borderTopColor">#5B9BD5</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">medium</property>
+                    <property name="textAlign">center</property>
+                    <cell id="93">
+                        <property name="backgroundColor">#9BC2E6</property>
+                        <property name="color">#FFFFFF</property>
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="textAlign">left</property>
+                        <data id="134">
+                            <property name="resultSetColumn">NOMBRE</property>
+                        </data>
+                    </cell>
+                    <cell id="94">
+                        <property name="backgroundColor">#FFFFFF</property>
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <data id="136">
+                            <list-property name="highlightRules">
+                                <structure>
+                                    <property name="operator">eq</property>
+                                    <property name="color">#FFFFFF</property>
+                                    <expression name="testExpr" type="javascript">row["MES01"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">new Number("0")</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <structure name="toc"/>
+                            <property name="resultSetColumn">MES01</property>
+                        </data>
+                    </cell>
+                    <cell id="95">
+                        <property name="backgroundColor">#FFFFFF</property>
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <data id="138">
+                            <list-property name="highlightRules">
+                                <structure>
+                                    <property name="operator">eq</property>
+                                    <property name="color">#FFFFFF</property>
+                                    <expression name="testExpr" type="javascript">row["MES02"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">new Number("0")</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <property name="resultSetColumn">MES02</property>
+                        </data>
+                    </cell>
+                    <cell id="96">
+                        <property name="backgroundColor">#FFFFFF</property>
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <list-property name="highlightRules">
+                            <structure>
+                                <property name="operator">eq</property>
+                                <property name="color">#FFFFFF</property>
+                                <expression name="testExpr" type="javascript">row["MES03"]</expression>
+                                <simple-property-list name="value1">
+                                    <value type="javascript">new Number("0")</value>
+                                </simple-property-list>
+                            </structure>
+                        </list-property>
+                        <data id="140">
+                            <property name="resultSetColumn">MES03</property>
+                        </data>
+                    </cell>
+                    <cell id="97">
+                        <property name="backgroundColor">#FFFFFF</property>
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <list-property name="highlightRules">
+                            <structure>
+                                <property name="operator">eq</property>
+                                <property name="color">#FFFFFF</property>
+                                <expression name="testExpr" type="javascript">row["MES04"]</expression>
+                                <simple-property-list name="value1">
+                                    <value type="javascript">new Number("0")</value>
+                                </simple-property-list>
+                            </structure>
+                        </list-property>
+                        <data id="142">
+                            <property name="resultSetColumn">MES04</property>
+                        </data>
+                    </cell>
+                    <cell id="98">
+                        <property name="backgroundColor">#FFFFFF</property>
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <data id="144">
+                            <list-property name="highlightRules">
+                                <structure>
+                                    <property name="operator">eq</property>
+                                    <property name="color">#FFFFFF</property>
+                                    <expression name="testExpr" type="javascript">row["MES05"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">new Number("0")</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <property name="resultSetColumn">MES05</property>
+                        </data>
+                    </cell>
+                    <cell id="99">
+                        <property name="backgroundColor">#FFFFFF</property>
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <data id="146">
+                            <list-property name="highlightRules">
+                                <structure>
+                                    <property name="operator">eq</property>
+                                    <property name="color">#FFFFFF</property>
+                                    <expression name="testExpr" type="javascript">row["MES06"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">new Number("0")</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <property name="resultSetColumn">MES06</property>
+                        </data>
+                    </cell>
+                    <cell id="100">
+                        <property name="backgroundColor">#FFFFFF</property>
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <data id="148">
+                            <list-property name="highlightRules">
+                                <structure>
+                                    <property name="operator">eq</property>
+                                    <property name="color">#FFFFFF</property>
+                                    <expression name="testExpr" type="javascript">row["MES07"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">new Number("0")</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <property name="resultSetColumn">MES07</property>
+                        </data>
+                    </cell>
+                    <cell id="101">
+                        <property name="backgroundColor">#FFFFFF</property>
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <data id="150">
+                            <list-property name="highlightRules">
+                                <structure>
+                                    <property name="operator">eq</property>
+                                    <property name="color">#FFFFFF</property>
+                                    <expression name="testExpr" type="javascript">row["MES08"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">new Number("0")</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <property name="resultSetColumn">MES08</property>
+                        </data>
+                    </cell>
+                    <cell id="102">
+                        <property name="backgroundColor">#FFFFFF</property>
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <data id="152">
+                            <list-property name="highlightRules">
+                                <structure>
+                                    <property name="operator">eq</property>
+                                    <property name="color">#FFFFFF</property>
+                                    <expression name="testExpr" type="javascript">row["MES09"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">new Number("0")</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <property name="resultSetColumn">MES09</property>
+                        </data>
+                    </cell>
+                    <cell id="103">
+                        <property name="backgroundColor">#FFFFFF</property>
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <data id="154">
+                            <list-property name="highlightRules">
+                                <structure>
+                                    <property name="operator">eq</property>
+                                    <property name="color">#FFFFFF</property>
+                                    <expression name="testExpr" type="javascript">row["MES10"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">new Number("0")</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <property name="resultSetColumn">MES10</property>
+                        </data>
+                    </cell>
+                    <cell id="104">
+                        <property name="backgroundColor">#FFFFFF</property>
+                        <property name="borderRightColor">#5B9BD5</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <data id="156">
+                            <list-property name="highlightRules">
+                                <structure>
+                                    <property name="operator">eq</property>
+                                    <property name="color">#FFFFFF</property>
+                                    <expression name="testExpr" type="javascript">row["MES11"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">new Number("0")</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <property name="resultSetColumn">MES11</property>
+                        </data>
+                    </cell>
+                    <cell id="105">
+                        <property name="backgroundColor">#FFFFFF</property>
+                        <data id="158">
+                            <list-property name="highlightRules">
+                                <structure>
+                                    <property name="operator">eq</property>
+                                    <property name="color">#FFFFFF</property>
+                                    <expression name="testExpr" type="javascript">row["MES12"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">new Number("0")</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <property name="resultSetColumn">MES12</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="106">
+                    <cell id="107"/>
+                    <cell id="108"/>
+                    <cell id="109"/>
+                    <cell id="110"/>
+                    <cell id="111"/>
+                    <cell id="112"/>
+                    <cell id="113"/>
+                    <cell id="114"/>
+                    <cell id="115"/>
+                    <cell id="116"/>
+                    <cell id="117"/>
+                    <cell id="118"/>
+                    <cell id="119"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

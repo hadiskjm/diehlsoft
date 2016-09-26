@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+						"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Perfil">
+	  
+    <parameterMap class="bean.BeanPerfil" id="perfilMapInsert" >
+   	    <parameter property="intpefId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+   	    <parameter property="strpefDescripcion"   	jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+		<parameter property="dtepefFechaIngreso"  	jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />
+		<parameter property="dtepefFechaUpdate"     jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />		
+		<parameter property="strpefUserIngreso"  	jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strpefUserUpdate"      jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strpefEstado"  		jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strpefLocale"  	    jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />			
+	</parameterMap>
+	
+	<parameterMap class="bean.BeanPerfil" id="perfilMapUpdate" >
+   	    <parameter property="intpefId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+   	    <parameter property="strpefDescripcion"   	jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+		<parameter property="dtepefFechaUpdate"     jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />		
+		<parameter property="strpefUserUpdate"      jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strpefEstado"  		jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strpefLocale"  	    jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="intpefMensaje"   	    jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />			
+	</parameterMap>	
+
+    <procedure id="SP_PEFINSERT" parameterMap="perfilMapInsert">  
+   { call SP_PEFINSERT(?,?,?,?,?,?,?,?) } 
+    </procedure>
+    
+    <procedure id="SP_PEFUPDATE" parameterMap="perfilMapUpdate">  
+   { call SP_PEFUPDATE(?,?,?,?,?,?,?) } 
+    </procedure>
+    
+    <procedure id="SP_PEFACTIVEOINACTIVE" resultClass="bean.BeanPerfil" parameterClass="bean.BeanPerfil">   
+   { call SP_PEFACTIVEOINACTIVE(#intpefId#,#dtepefFechaUpdate#,#strpefUserUpdate#,#strpefEstado#) } 
+    </procedure>
+    
+    <procedure id="SP_PEFAUCLIST" resultClass="bean.BeanPerfil" parameterClass="bean.BeanPerfil">  
+   { call SP_PEFAUCLIST(#strpefDescripcion#,#strpefLocale#) } 
+    </procedure>
+    
+    <procedure id="SP_PEFSEARCHLIST" resultClass="bean.BeanPerfil" parameterClass="bean.BeanPerfil">  
+   { call SP_PEFSEARCHLIST(#strpefDescripcion#,#strpefEstado#,#strpefLocale#) } 
+    </procedure>
+    
+    <procedure id="SP_PEFSEARCHXID" parameterClass="Integer" resultClass="bean.BeanPerfil">  
+   { call SP_PEFSEARCHXID(#value#) } 
+    </procedure>
+    
+</sqlMap>

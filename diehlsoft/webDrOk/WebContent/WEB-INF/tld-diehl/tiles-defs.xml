@@ -1,0 +1,449 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+  "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+
+<definition name="base.login" path="/pages/general/principalLogin.jsp" >
+	<put name="body" value="/pages/index.jsp" />
+	<put name="title" value="..:: Login ::.." />
+</definition>
+
+
+<!--+++++++++++++++++++++++++++++++++-->
+<!--+++++++++++++++++++++++++++++++++-->
+<!--+++++++++++++++++++++++++++++++++-->
+<!--+++++++++++++++++++++++++++++++++-->
+<!--  Base Tiles Definition Emergente-->
+<definition name="base.definitionEmergente" path="/pages/general/principalLayout.jsp" >
+	<put name="header" value="" />
+	<put name="navigation" value="" />
+	<put name="body" value="/pages/inicio.jsp" />
+	<put name="title" value="..:: Lazo ::.." />
+	<put name="footer" value="" />
+</definition>
+
+<definition name="page.imagenSeleccionar" extends="base.definitionEmergente" >
+	<put name="title" value="..:: Seleccionar Imagen ::.." />
+	<put name="body" value="/pages/imagen/imagenSeleccionar.jsp" />
+</definition>
+
+<definition name="page.actualidadLaboralInvitacion" extends="base.definitionEmergente" >
+	<put name="title" value="..:: Enviar Invitación ::.." />
+	<put name="body" value="/pages/informativo/actualidadLaboralInvitacion.jsp" />
+</definition>
+<!--+++++++++++++++++++++++++++++++++-->
+<!--+++++++++++++++++++++++++++++++++-->
+<!--+++++++++++++++++++++++++++++++++-->
+<!--+++++++++++++++++++++++++++++++++-->
+
+
+<!-- **********************************-->
+<!-- **********************************-->
+<!-- **********************************-->
+<!-- **********************************-->
+<!--  Inicio Base Tiles Definition News-->
+<definition name="base.definitionNews" path="/pages/general/principalLayoutNews.jsp" >
+	<put name="header" value="/pages/general/header.jsp" />
+	<put name="navigation" value="/pages/general/menuResponsive.jsp" />
+	<put name="body" value="/pages/inicio.jsp" />
+	<put name="title" value="..:: DrOk Healtcare News ::.." />
+	<put name="footer" value="/pages/general/footer.jsp" />
+</definition>
+
+<definition name="page.news.home" extends="base.definitionNews" >
+	<put name="title" value="..:: Home ::.." />
+	<put name="body" value="/pages/general/home.jsp" />
+</definition>
+<!-- Fin Base Tiles Definition News -->
+<!-- **********************************-->
+<!-- **********************************-->
+<!-- **********************************-->
+<!-- **********************************-->
+
+
+<!--########################################-->
+<!--########################################-->
+<!--########################################-->
+<!--########################################-->
+<!--  Inicio Base Tiles Definition Education-->
+<definition name="base.definitionEducation" path="/pages/general/principalLayoutEducation.jsp" >
+	<put name="header" value="/pages/general/header.jsp" />
+	<put name="navigation" value="/pages/general/menuResponsive.jsp" />
+	<put name="body" value="/pages/inicio.jsp" />
+	<put name="title" value="..:: DrOk Healtcare Education::.." />
+	<put name="footer" value="/pages/general/footer.jsp" />
+</definition>
+
+<definition name="page.education.home" extends="base.definitionEducation" >
+	<put name="title" value="..:: Home ::.." />
+	<put name="body" value="/pages/general/home.jsp" />
+</definition>
+<!-- Fin Base Tiles Definition Education -->
+<!--########################################-->
+<!--########################################-->
+<!--########################################-->
+<!--########################################-->
+
+
+<!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&-->
+<!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&-->
+<!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&-->
+<!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&-->
+<!--  Base Tiles Definition CORP-->
+<definition name="base.definition" path="/pages/general/principalLayout.jsp" >
+    <put name="header" value="" />
+	<put name="navigation" value="/pages/general/menuResponsive.jsp" />
+	<put name="body" value="/pages/inicio.jsp" />
+	<put name="title" value="..:: DrOk Healtcare Corporation::.." />
+	<put name="footer" value="/pages/general/footer.jsp" />
+</definition>
+
+<definition name="page.corp.home" extends="base.definition" >
+	<put name="title" value="..:: Home ::.." />
+	<put name="body" value="/pages/general/home.jsp" />
+</definition>
+
+<!--  Page de Login -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+<definition name="page.login" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: Login ::.." />
+	<put name="body" value="/pages/usuario/login.jsp" />
+</definition>
+
+<!--  Fin Page de login  -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+<!--  Page de MenuNivel1 -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+<definition name="page.corp.menunivel1Search" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: Buscar Menu Primer Nivel ::.." />
+	<put name="body" value="/pages/menunivel1/menunivel1Search.jsp" />
+</definition>
+
+<definition name="page.corp.menunivel1New" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: Nuevo Menu Primer Nivel ::.." />
+	<put name="body" value="/pages/menunivel1/menunivel1New.jsp" />
+</definition>
+
+<definition name="page.corp.menunivel1Update" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: Actualizar Menu Primer Nivel ::.." />
+	<put name="body" value="/pages/menunivel1/menunivel1Update.jsp" />
+</definition>
+
+<definition name="page.corp.menunivel1ViewCorp" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: DrOk Healthcare Corporation ::.." />
+	<put name="body" value="/pages/menunivel1/menunivel1ViewCorp.jsp" />
+</definition>
+
+<!--  Fin Page de MenuNivel1  -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+
+<!--  Page de MenuNivel2 -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+<definition name="page.corp.menunivel2Search" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: Buscar Menu Segundo Nivel ::.." />
+	<put name="body" value="/pages/menunivel2/menunivel2Search.jsp" />
+</definition>
+
+<definition name="page.corp.menunivel2New" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: Nuevo Menu Segundo Nivel ::.." />
+	<put name="body" value="/pages/menunivel2/menunivel2New.jsp" />
+</definition>
+
+<definition name="page.corp.menunivel2Update" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: Actualizar Menu Segundo Nivel ::.." />
+	<put name="body" value="/pages/menunivel2/menunivel2Update.jsp" />
+</definition>
+
+<definition name="page.corp.menunivel2ViewCorp" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: DrOk Healthcare Corporation ::.." />
+	<put name="body" value="/pages/menunivel2/menunivel2ViewCorp.jsp" />
+</definition>
+
+<!--  Fin Page de MenuNivel2  -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+<!--  Page de MenuNivel3 -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+<definition name="page.corp.menunivel3Search" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: Buscar Menu Tercer Nivel ::.." />
+	<put name="body" value="/pages/menunivel3/menunivel3Search.jsp" />
+</definition>
+
+<definition name="page.corp.menunivel3New" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: Nuevo Menu Tercer Nivel ::.." />
+	<put name="body" value="/pages/menunivel3/menunivel3New.jsp" />
+</definition>
+
+<definition name="page.corp.menunivel3Update" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: Actualizar Menu Tercer Nivel ::.." />
+	<put name="body" value="/pages/menunivel3/menunivel3Update.jsp" />
+</definition>
+
+<definition name="page.corp.menunivel3ViewCorp" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: DrOk Healthcare Corporation ::.." />
+	<put name="body" value="/pages/menunivel3/menunivel3ViewCorp.jsp" />
+</definition>
+
+<!--  Fin Page de MenuNivel3  -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+<!--  Page de Contactenos -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+<definition name="page.corp.contactenosSearch" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: Contactenos ::.." />
+	<put name="body" value="/pages/contactenos/contactenosSearch.jsp" />
+</definition>
+
+<definition name="page.corp.contactenosNew" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: Contactenos ::.." />
+	<put name="body" value="/pages/contactenos/contactenosNew.jsp" />
+</definition>
+
+
+<!--  Fin Page de Contactenos  -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+<!--  Page de Trabaja con Nosotros -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+<definition name="page.corp.tcnosotrosSearch" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: Trabaja con Nosotros ::.." />
+	<put name="body" value="/pages/tcnosotros/tcnosotrosSearch.jsp" />
+</definition>
+
+<definition name="page.corp.tcnosotrosNew" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: Trabaja con Nosotros ::.." />
+	<put name="body" value="/pages/tcnosotros/tcnosotrosNew.jsp" />
+</definition>
+
+
+<!--  Fin Page de Trabaja con Nosotros  -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+<!--  Page de Persona -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+<definition name="page.corp.personaSearch" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: Trabaja con Nosotros ::.." />
+	<put name="body" value="/pages/persona/personaSearch.jsp" />
+</definition>
+
+<definition name="page.corp.personaNew" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: Trabaja con Nosotros ::.." />
+	<put name="body" value="/pages/persona/personaNew.jsp" />
+</definition>
+
+
+<!--  Fin Page de Persona  -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+<!--  Inicio de Imagen -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+<definition name="page.corp.imagenSearch" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: BUSCAR IMAGEN ::.." />
+	<put name="body" value="/pages/imagen/imagenSearch.jsp" />
+</definition>
+
+<definition name="page.corp.imagenNew" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: NUEVA IMAGEN ::.." />
+	<put name="body" value="/pages/imagen/imagenNew.jsp" />
+</definition>
+
+<definition name="page.corp.imagenUpdate" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: NUEVA ACTUALIZAR ::.." />
+	<put name="body" value="/pages/imagen/imagenUpdate.jsp" />
+</definition>
+
+<!--  Fin de Imagen -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+<!--  Inicio de Avisos -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+
+<definition name="page.corp.avisoLegal" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: AVISO LEGAL ::.." />
+	<put name="body" value="/pages/aviso/avisoLegal.jsp" />
+</definition>
+<!--  Fin de Avisos -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+<!--  Page de Error -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+<definition name="page.corp.error" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: PAGINA NO ENCONTRADO ::.." />
+	<put name="body" value="/pages/error/error.jsp" />
+</definition>
+
+<!--  Fin Page de Error  -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+<definition name="page.login2" extends="base.definition" >
+	<put name="title" value="..:: login ::.." />
+	<put name="body" value="/pages/usuario/login.jsp" />
+</definition>
+
+<definition name="page.perfilSearch" extends="base.definition" >
+	<put name="title" value="..:: Buscar Perfil ::.." />
+	<put name="body" value="/pages/perfil/perfilSearch.jsp" />
+</definition>
+
+<definition name="page.perfilMn" extends="base.definition" >
+	<put name="title" value="..:: Nuevo Perfil ::.." />
+	<put name="body" value="/pages/perfil/perfilMn.jsp" />
+</definition>
+
+<definition name="page.perfilUpdate" extends="base.definition" >
+	<put name="title" value="..:: Actualizar Perfil ::.." />
+	<put name="body" value="/pages/perfil/perfilUpdate.jsp" />
+</definition>
+
+<definition name="page.opcionPerfilSearch" extends="base.definition" >
+	<put name="title" value="..:: Buscar Opción Perfil ::.." />
+	<put name="body" value="/pages/opcionPerfil/opcionPerfilSearch.jsp" />
+</definition>
+
+<definition name="page.opcionPerfilNew" extends="base.definition" >
+	<put name="title" value="..:: Nuevo Opción Perfil ::.." />
+	<put name="body" value="/pages/opcionPerfil/opcionPerfilNew.jsp" />
+</definition>
+
+<definition name="page.actualidadLaboralPublicado" extends="base.definition" >
+	<put name="title" value="..:: ACTUALIDAD LABORAL ::.." />
+	<put name="body" value="/pages/informativo/actualidadLaboralPublicado.jsp" />
+</definition>
+
+<definition name="page.actualidadLaboralSearch" extends="base.definition" >
+    <put name="navigation" value="/pages/general/menuResponsive.jsp" />
+	<put name="title" value="..:: BUSCAR ACTUALIDAD LABORAL ::.." />
+	<put name="body" value="/pages/informativo/actualidadLaboralSearch.jsp" />
+</definition>
+
+<definition name="page.actualidadLaboralNew" extends="base.definition" >
+    <put name="navigation" value="/pages/general/menuResponsive.jsp" />
+	<put name="title" value="..:: NUEVA ACTUALIDAD LABORAL ::.." />
+	<put name="body" value="/pages/informativo/actualidadLaboralNew.jsp" />
+</definition>
+
+<definition name="page.actualidadLaboralUpdate" extends="base.definition" >
+    <put name="navigation" value="/pages/general/menuResponsive.jsp" />
+	<put name="title" value="..:: ACTUALIZAR ACTUALIDAD LABORAL ::.." />
+	<put name="body" value="/pages/informativo/actualidadLaboralUpdate.jsp" />
+</definition>
+
+<definition name="page.actualidadLaboralPrevia" extends="base.definition" >
+    <put name="navigation" value="/pages/general/menuResponsive.jsp" />
+	<put name="title" value="..:: PREVIA ACTUALIDAD LABORAL ::.." />
+	<put name="body" value="/pages/informativo/actualidadLaboralPrevia.jsp" />
+</definition>
+
+<definition name="page.criterioPublic" extends="base.definition" >
+	<put name="title" value="..:: CRITERIO TRIBUNAL CONSTITUCIONAL ::.." />
+	<put name="body" value="/pages/criterio/criterioPublic.jsp" />
+</definition>
+
+<definition name="page.gestionPersonasPublic" extends="base.definition" >
+	<put name="title" value="..:: GESTIÓN DE PERSONAS ::.." />
+	<put name="body" value="/pages/gestion/gestionPersonasPublic.jsp" />
+</definition>
+
+<definition name="page.boletinSearch" extends="base.definition" >
+    <put name="header" value="/pages/general/headerLogin.jsp" />
+    <put name="navigation" value="/pages/general/menuResponsive.jsp" />
+	<put name="title" value="..:: BUSCAR BOLETIN ::.." />
+	<put name="body" value="/pages/boletin/boletinSearch.jsp" />
+</definition>
+
+<definition name="page.boletinNew" extends="base.definition" >
+    <put name="navigation" value="/pages/general/menuResponsive.jsp" />
+	<put name="title" value="..:: NUEVO BOLETIN ::.." />
+	<put name="body" value="/pages/boletin/boletinNew.jsp" />
+</definition>
+
+<definition name="page.boletinUpdate" extends="base.definition" >
+    <put name="navigation" value="/pages/general/menuResponsive.jsp" />
+	<put name="title" value="..:: ACTUALIZAR BOLETIN ::.." />
+	<put name="body" value="/pages/boletin/boletinUpdate.jsp" />
+</definition>
+
+<definition name="page.actualidadLaboralPublic" extends="base.definition" >
+	<put name="title" value="..:: COYUNTURA LABORAL ::.." />
+	<put name="body" value="/pages/informativo/actualidadLaboralPublic.jsp" />
+</definition>
+
+<definition name="page.regulacionLaboralPublic" extends="base.definition" >
+	<put name="title" value="..:: REGULACIÓN LABORAL ::.." />
+	<put name="body" value="/pages/regulacion/regulacionLaboralPublic.jsp" />
+</definition>
+
+<definition name="page.notasPrensaPublic" extends="base.definition" >
+	<put name="title" value="..:: NOTAS DE PRENSA ::.." />
+	<put name="body" value="/pages/prensa/notasPrensaPublic.jsp" />
+</definition>
+
+<definition name="page.boletinAnteriores" extends="base.definition" >
+	<put name="title" value="..:: ACTUALIZAR BOLETIN ::.." />
+	<put name="body" value="/pages/boletin/boletinAnteriores.jsp" />
+</definition>
+
+<definition name="page.actualidadLaboralListBol" extends="base.definition" >
+	<put name="title" value="..:: VER BOLETIN ::.." />
+	<put name="body" value="/pages/informativo/actualidadLaboralListBol.jsp" />
+</definition>
+
+<definition name="page.actualidadLaboralVisorSend" extends="base.definition" >
+	<put name="title" value="..:: VISOR DE ENVIO ::.." />
+	<put name="body" value="/pages/informativo/actualidadLaboralVisorSend.jsp" />
+</definition>
+
+<definition name="page.publicacionesPublic" extends="base.definition" >
+	<put name="title" value="..:: PUBLICACIONES ::.." />
+	<put name="body" value="/pages/publicaciones/publicacionesPublic.jsp" />
+</definition>
+
+<definition name="page.actualidadLaboralVisor" extends="base.definition" >
+	<put name="title" value="..:: VISOR DE BOLETIN ::.." />
+	<put name="body" value="/pages/informativo/actualidadLaboralVisor.jsp" />
+</definition>
+
+<!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&-->
+<!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&-->
+<!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&-->
+<!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&-->
+
+</tiles-definitions>

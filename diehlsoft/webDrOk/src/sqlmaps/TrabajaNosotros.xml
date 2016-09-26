@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+						"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="TrabajaNosotros">
+	  
+    <parameterMap class="bean.BeanTrabajaNosotros" id="tcnMapInsert" >
+   	    <parameter property="inttcnId"   	         jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+   	    <parameter property="strtcnNombres"          jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+   	    <parameter property="strtcnApellidos"        jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+   	    <parameter property="inttcnEdad"   	         jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+   	    <parameter property="strtcnDireccion"  	     jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+   	    <parameter property="strtcnCorreo"  	     jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+   	    <parameter property="lbltcnCurriculum"  	 jdbcType="BLOB"     mode="IN"/>
+		<parameter property="dtetcnFechaIngreso"  	 jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />		
+
+	</parameterMap>
+	
+
+    <procedure id="SP_TCNINSERT" parameterMap="tcnMapInsert">  
+   { call SP_TCNINSERT(?,?,?,?,?,?,?,?) } 
+    </procedure>
+    
+    <procedure id="SP_TCNSEARCHLIST" resultClass="bean.BeanTrabajaNosotros">  
+   { call SP_TCNSEARCHLIST() } 
+    </procedure>
+   
+    <procedure id="SP_TCNSEARCHXID" resultClass="bean.BeanTrabajaNosotros" parameterClass="Integer">  
+   { call SP_TCNSEARCHXID(#value#) } 
+    </procedure>
+
+</sqlMap>

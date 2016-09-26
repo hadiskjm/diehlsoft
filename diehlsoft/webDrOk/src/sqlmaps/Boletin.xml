@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+						"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Boletin">
+	  
+    <parameterMap class="bean.BeanBoletin" id="boletinMapInsert" >
+   	    <parameter property="intbolId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+   	    <parameter property="strbolNombre"   	    jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+		<parameter property="dtebolFechaIngreso"  	jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />
+		<parameter property="dtebolFechaUpdate"     jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />		
+		<parameter property="strbolUserIngreso"  	jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strbolUserUpdate"      jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strbolEstado"  		jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strbolFile"  	        jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="intusuId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+	</parameterMap>
+	
+	<parameterMap class="bean.BeanBoletin" id="boletinMapUpdate" >
+   	    <parameter property="intbolId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+   	    <parameter property="strbolNombre"   	    jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+		<parameter property="dtebolFechaUpdate"     jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />		
+		<parameter property="strbolUserUpdate"      jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strbolEstado"  		jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strbolFile"  	        jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="intusuId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+		<parameter property="intbolMensaje"   	    jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />			
+	</parameterMap>	
+	
+	<parameterMap class="bean.BeanBoletin" id="boletinMapDelete" >
+   	    <parameter property="intbolId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+		<parameter property="dtebolFechaUpdate"     jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />		
+		<parameter property="strbolUserUpdate"      jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strbolEstado"  		jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="intusuId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+		<parameter property="intbolMensaje"   	    jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />			
+	</parameterMap>
+
+    <procedure id="SP_BOLINSERT" parameterMap="boletinMapInsert">  
+   { call SP_BOLINSERT(?,?,?,?,?,?,?,?,?) } 
+    </procedure>
+    
+    <procedure id="SP_BOLUPDATE" parameterMap="boletinMapUpdate">  
+   { call SP_BOLUPDATE(?,?,?,?,?,?,?,?) } 
+    </procedure>
+    
+    <procedure id="SP_BOLDELETE" parameterMap="boletinMapDelete">  
+   { call SP_BOLDELETE(?,?,?,?,?,?) } 
+    </procedure>
+    
+    <procedure id="SP_BOLAUCLIST" resultClass="bean.BeanBoletin" parameterClass="bean.BeanBoletin">  
+   { call SP_BOLAUCLIST(#strbolNombre#) } 
+    </procedure>
+    
+    <procedure id="SP_BOLSEARCHLIST" resultClass="bean.BeanBoletin" parameterClass="bean.BeanBoletin">  
+   { call SP_BOLSEARCHLIST(#strbolNombre#,#strbolEstado#) } 
+    </procedure>
+    
+    <procedure id="SP_BOLSEARCHLISTBACK" resultClass="bean.BeanBoletin">  
+   { call SP_BOLSEARCHLISTBACK() } 
+    </procedure>
+    
+    <procedure id="SP_BOLSEARCHXID" parameterClass="Integer" resultClass="bean.BeanBoletin">  
+   { call SP_BOLSEARCHXID(#value#) } 
+    </procedure>
+
+</sqlMap>

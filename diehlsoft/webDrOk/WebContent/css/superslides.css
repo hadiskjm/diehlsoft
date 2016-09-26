@@ -1,0 +1,225 @@
+#slides
+{
+	position: relative;
+}
+
+	#slides .slides-container
+	{
+		display: none;
+	}
+
+	#slides .scrollable
+	{
+		*zoom: 1;
+		position: relative;
+		top: 0;
+		left: 0;
+		overflow-y: auto;
+		height: 100%;
+		
+		-webkit-overflow-scrolling: touch;
+	}
+
+		#slides .scrollable:after
+		{
+			content: "";
+			display: table;
+			clear: both;
+		}
+	
+	.sscont
+	{
+		display: table;
+		width: 100%;
+		padding: 0 60px;
+		min-width: 280px;
+		height: 100%;
+		background: rgba(36,36,36,0.7);
+	}
+	
+		.sscont .supercont
+		{
+			display: table-cell;
+			vertical-align: middle;
+			width: 100%;
+			height: 100%;
+		}
+		
+			.sscont .supercont .maxdiv
+			{
+				margin: 0 auto;
+				width: 100%;
+				max-width: 1140px;
+				padding: 0 30px;
+				color: #FFF;
+			}
+			
+				.sscont .supercont .maxdiv h3
+				{
+					display: block;
+					width: 100%;
+					max-width: 720px;
+					font-size: 62px;
+					line-height: 62px;
+					font-weight: 700;
+					text-transform: uppercase;
+					margin: 0 0 10px 0;
+					letter-spacing: -1px;
+					font-family: "Montserrat";
+				}
+				
+				.sscont .supercont .maxdiv p
+				{
+					display: block;
+					width: 100%;
+					max-width: 900px;
+					font-size: 20px;
+					line-height: 34px;
+					font-weight: 400;
+					margin: 0;
+				}
+
+	.slides-navigation
+	{
+		margin: 0 auto;
+		position: absolute;
+		z-index: 3;
+		width: 100%;
+		top: 50%;
+		top: -moz-calc(50% - 30px);
+		top: -webkit-calc(50% - 30px);
+		top: -o-calc(50% - 30px);
+		top: calc(50% - 30px);
+	}
+	
+		.slides-navigation a
+		{
+			position: absolute;
+			display: block;
+			font-size: 60px;
+			color: #FFF;
+			opacity: 0.2;
+			
+			-webkit-transition: all 0.05s linear;
+			-moz-transition: all 0.05s linear;
+			-o-transition: all 0.05s linear;
+			transition: all 0.05s linear;
+		}
+		
+			.slides-navigation a.prev
+			{
+				left: 25px;
+				padding: 0 0 0 5px;
+			}
+			
+				.slides-navigation a:hover.prev
+				{
+					padding: 0 5px 0 0;
+				}
+			
+			.slides-navigation a.next
+			{
+				right: 30px;
+				padding: 0 5px 0 0;
+			}
+			
+				.slides-navigation a:hover.next
+				{
+					padding: 0 0 0 5px;
+				}
+			
+				.slides-navigation a:hover
+				{
+					color: #1abc9c;
+					opacity: 1;
+				}
+
+/* ==================================================
+   Responsive Media Queries - Tablets
+================================================== */
+
+@media screen and (max-width: 768px)
+{
+
+	.sscont
+	{
+		padding: 0 40px;
+	}
+	
+	.slides-navigation a
+	{
+		font-size: 40px;
+	}
+	
+		.slides-navigation a.prev
+		{
+			left: 25px;
+		}
+		
+		.slides-navigation a.next
+		{
+			right: 25px;
+		}
+	
+	.sscont .supercont .maxdiv
+	{
+		padding: 0 20px;
+	}
+	
+		.sscont .supercont .maxdiv h3
+		{
+			font-size: 42px;
+			line-height: 42px;
+			letter-spacing: -0.6px;
+		}
+		
+		.sscont .supercont .maxdiv p
+		{
+			font-size: 18px;
+			line-height: 28px;
+		}
+
+}
+
+/* ==================================================
+   Responsive Media Queries - Mobiles
+================================================== */
+
+@media screen and (max-width: 480px)
+{		
+
+	.slides-navigation a
+	{
+		font-size: 30px;
+	}
+	
+		.slides-navigation a.prev
+		{
+			left: 20px;
+		}
+		
+		.slides-navigation a.next
+		{
+			right: 20px;
+		}
+	
+	.sscont .supercont .maxdiv
+	{
+		padding: 0 10px;
+	}
+	
+		.sscont .supercont .maxdiv h3
+		{
+			font-size: 30px;
+			line-height: 30px;
+			letter-spacing: -0.2px;
+		}
+		
+		.sscont .supercont .maxdiv p
+		{
+			font-size: 16px;
+			line-height: 20px;
+		}
+
+}
+

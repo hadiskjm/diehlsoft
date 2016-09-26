@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+						"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Imagen">
+	  
+    <parameterMap class="bean.BeanImagen" id="imagenMapInsert" >
+   	    <parameter property="intimgId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+   	    <parameter property="strimgNombre"   	    jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+   	    <parameter property="strimgModulo"  	    jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="dteimgFechaIngreso"  	jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />
+		<parameter property="dteimgFechaUpdate"     jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />		
+		<parameter property="strimgUserIngreso"  	jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strimgUserUpdate"      jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strimgEstado"  		jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+	</parameterMap>
+	
+	<parameterMap class="bean.BeanImagen" id="imagenMapUpdate" >
+   	    <parameter property="intimgId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+   	    <parameter property="strimgNombre"   	    jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+   	    <parameter property="strimgModulo"  	    jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="dteimgFechaUpdate"     jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />		
+		<parameter property="strimgUserUpdate"      jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strimgEstado"  		jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="intimgMensaje"   	    jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />			
+	</parameterMap>	
+	
+	<parameterMap class="bean.BeanImagen" id="imagenMapDelete" >
+   	    <parameter property="intimgId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+   	  	<parameter property="intimgMensaje"   	    jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />			
+	</parameterMap>	
+
+    <procedure id="SP_IMGINSERT" parameterMap="imagenMapInsert">  
+   { call SP_IMGINSERT(?,?,?,?,?,?,?,?) } 
+    </procedure>
+    
+    <procedure id="SP_IMGUPDATE" parameterMap="imagenMapUpdate">  
+   { call SP_IMGUPDATE(?,?,?,?,?,?,?) } 
+    </procedure>
+    
+    <procedure id="SP_IMGDELETE" parameterMap="imagenMapDelete">  
+   { call SP_IMGDELETE(?,?) } 
+    </procedure>
+        
+    <procedure id="SP_IMGAUCLIST" resultClass="bean.BeanImagen" parameterClass="bean.BeanImagen">  
+   { call SP_IMGAUCLIST(#strimgNombre#) } 
+    </procedure>
+    
+    <procedure id="SP_IMGSEARCHLIST" resultClass="bean.BeanImagen" parameterClass="bean.BeanImagen">  
+   { call SP_IMGSEARCHLIST(#strimgNombre#,#strimgModulo#,#strimgEstado#) } 
+    </procedure>
+
+    
+    <procedure id="SP_IMGSEARCHXID" parameterClass="Integer" resultClass="bean.BeanImagen">  
+   { call SP_IMGSEARCHXID(#value#) } 
+    </procedure>
+
+</sqlMap>

@@ -1,0 +1,7 @@
+a.href_disabled{
+pointer-events: none;
+cursor: default;
+display: inline-block !important;
+*display: inline;
+visibility: hidden;
+}

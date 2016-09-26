@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+
+<!--
+     This is a minimal Validator form file with a couple of examples.
+-->
+
+    <global>
+
+        <!-- An example global constant
+        end example-->
+        <constant>
+            <constant-name>postalCode</constant-name>
+            <constant-value>^\d{5}\d*$</constant-value>
+        </constant>
+             
+        <constant>
+             <constant-name>telephoneFormat</constant-name>
+             <constant-value>^\d{5,10}$</constant-value>
+        </constant>
+        
+
+    </global>
+
+    <formset language="es">
+
+        <!-- usuarioForm -->
+        <form name="usuarioForm">
+            <field
+                property="strusuUser"
+                depends="required">
+                    <arg key="usuarioForm.lbl.usuario"/>
+            </field>
+           
+             <field
+                property="strusuPassword"
+                depends="required,minlength">
+                    <arg0 key="usuarioForm.lbl.contrasena"/>
+                    <arg1 key="${var:minlength}" name="minlength" resource="false"/>
+                    <var>
+                        <var-name>minlength</var-name>
+                        <var-value>6</var-value>
+                    </var>
+            </field>
+            
+        </form>
+        
+                <!-- buscar perfilForm -->
+         <form name="perfilForm">           
+           <field
+			    property="strpefDescripcion"
+			    depends="required,mask">
+			    <arg0 key="perfilForm.txt.strpefDescripcion"/>
+			    <arg1 key="${var:mask}" name="mask" resource="false"/>
+			    <var>
+			        <var-name>mask</var-name>
+			        <var-value>[a-zA-Z]</var-value>
+			    </var>
+			</field>        
+        </form>
+            
+             <!--  Inicio contactenosForm -->
+        <form name="contactenosForm">
+            <field
+                property="strconNombresCompletos"
+                depends="required">
+                    <arg key="contactenosForm.conNew.txt.strconNombresCompletos"/>
+            </field>
+            
+            <field
+                property="strconCorreo"
+                depends="required,email">
+                    <arg key="contactenosForm.conNew.txt.strconCorreo"/>
+                    <msg name="email" key="contactenosForm.conNew.txt.strconCorreo.invalid"/>
+            </field>
+            
+            <field
+                property="strconComentario"
+                depends="required">
+                    <arg key="contactenosForm.conNew.txt.strconComentario"/>
+            </field>
+            </form>
+            <!-- Fin  contactenosForm -->
+            
+             <!--  Inicio trabajanosotrosForm -->
+        <form name="trabajanosotrosForm">
+            <field
+                property="strtcnNombres"
+                depends="required">
+                    <arg key="trabajanosotrosForm.tcnNew.txt.strtcnNombres"/>
+            </field>
+            
+            <field
+                property="strtcnApellidos"
+                depends="required">
+                    <arg key="trabajanosotrosForm.tcnNew.txt.strtcnApellidos"/>
+            </field>
+                       
+            <field property="inttcnEdad" depends="required, integer, intRange">
+            <arg0 key="trabajanosotrosForm.tcnNew.txt.inttcnEdad" />
+            <arg1 key="${var:min}" resource="false"/>
+            <arg2 key="${var:max}" resource="false"/>
+            <var>
+                <var-name>min</var-name>
+                <var-value>1</var-value>
+            </var>
+            <var>
+                <var-name>max</var-name>
+                <var-value>125</var-value>
+            </var>
+            </field>
+            
+             <field
+                property="strtcnDireccion"
+                depends="required">
+                    <arg key="trabajanosotrosForm.tcnNew.txt.strtcnDireccion"/>
+            </field>
+            
+            <field
+                property="strtcnCorreo"
+                depends="required,email">
+                    <arg key="trabajanosotrosForm.tcnNew.txt.strtcnCorreo"/>
+                    <msg name="email" key="trabajanosotrosForm.tcnNew.txt.strtcnCorreo.invalid"/>
+            </field>
+            
+            <field
+                property="lbltcnCurriculum"
+                depends="required">
+                    <arg key="trabajanosotrosForm.tcnNew.lbl.lbltcnCurriculum"/>
+            </field>
+            
+            </form>
+            <!-- Fin  trabajanosotrosForm -->
+            
+              <!--  Inicio personaForm -->
+        <form name="personaForm">
+            <field
+                property="strusuUser"
+                depends="required">
+                    <arg key="personaForm.personaNew.txt.strusuUser"/>
+            </field>
+            
+            <field
+                property="strusuPassword"
+                depends="required,minlength">
+                    <arg0 key="personaForm.personaNew.txt.strusuPassword"/>
+                    <arg1 key="${var:minlength}" name="minlength" resource="false"/>
+                    <var>
+                        <var-name>minlength</var-name>
+                        <var-value>6</var-value>
+                    </var>
+            </field>
+            
+            <field
+                property="strusuConfirPassword"
+                depends="required,minlength">
+                    <arg0 key="personaForm.personaNew.txt.strusuConfirPassword"/>
+                    <arg1 key="${var:minlength}" name="minlength" resource="false"/>
+                    <var>
+                        <var-name>minlength</var-name>
+                        <var-value>6</var-value>
+                    </var>
+            </field>
+            
+            <field
+                property="strperCorreo"
+                depends="required,email">
+                    <arg key="personaForm.personaNew.txt.strperCorreo"/>
+                    <msg name="email" key="personaForm.personaNew.txt.strperCorreo.invalid"/>
+            </field>
+            
+            <field                 
+                property="strperNombre"
+			    depends="required,mask">
+			    <arg0 key="personaForm.personaNew.txt.strperNombre"/>
+			    <arg1 key="${var:mask}" name="mask" resource="false"/>
+			    <var>
+			        <var-name>mask</var-name>
+			        <var-value>[a-zA-Z]</var-value>
+			    </var>
+            </field>
+            
+            <field                 
+                property="strperApellidoPaterno"
+			    depends="required,mask">
+			    <arg0 key="personaForm.personaNew.txt.strperApellidoPaterno"/>
+			    <arg1 key="${var:mask}" name="mask" resource="false"/>
+			    <var>
+			        <var-name>mask</var-name>
+			        <var-value>[a-zA-Z]</var-value>
+			    </var>
+            </field>
+            
+            <field                 
+                property="strperApellidoMaterno"
+			    depends="mask">
+			    <arg0 key="personaForm.personaNew.txt.strperApellidoMaterno"/>
+			    <arg1 key="${var:mask}" name="mask" resource="false"/>
+			    <var>
+			        <var-name>mask</var-name>
+			        <var-value>[a-zA-Z]</var-value>
+			    </var>
+            </field>
+            
+             <field
+                property="strperDireccion"
+                depends="required">
+                    <arg key="personaForm.personaNew.txt.strperDireccion"/>
+            </field>
+			
+			
+            
+	            <field property="strperTelefono" depends="required, mask">
+	            <arg key="personaForm.personaNew.txt.strperTelefono" />
+	            <arg1 key="personaForm.personaNew.txt.strperTelefono" />
+	            <var>
+	                <var-name>mask</var-name>
+	                <var-value>${telephoneFormat}</var-value>
+	            </var>       
+	          </field>
+        
+            </form>
+            <!-- Fin  personaForm -->
+            
+            
+        
+    </formset>
+
+    <!-- An example formset for another locale -->
+    <formset language="en">
+<!-- 
+        <constant>
+            <constant-name>postalCode</constant-name>
+            <constant-value>^[0-9a-zA-Z]*$</constant-value>
+        </constant>
+ -->
+        <!-- usuarioForm -->
+         <form name="usuarioForm">
+            <field
+                property="strusuUser"
+                depends="required">
+                    <arg0 key="usuarioForm.lbl.usuario"/>
+            </field>
+            
+            <field
+                property="strusuPassword"
+                depends="required,minlength">
+                    <arg0 key="usuarioForm.lbl.contrasena"/>
+                    <arg1 key="${var:minlength}" name="minlength" resource="false"/>
+                    <var>
+                        <var-name>minlength</var-name>
+                        <var-value>6</var-value>
+                    </var>
+            </field>
+        </form>
+        
+         <!-- buscar perfilForm -->
+         <form name="perfilForm">           
+           <field
+			    property="strpefDescripcion"
+			    depends="required,mask">
+			    <arg0 key="perfilForm.txt.strpefDescripcion"/>
+			    <arg1 key="${var:mask}" name="mask" resource="false"/>
+			    <var>
+			        <var-name>mask</var-name>
+			        <var-value>[a-zA-Z]</var-value>
+			    </var>
+			</field>        
+        </form>
+
+   </formset>
+
+</form-validation>

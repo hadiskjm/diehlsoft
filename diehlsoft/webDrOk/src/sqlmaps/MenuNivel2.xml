@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+						"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="MenuNivel2">
+	  
+    <parameterMap class="bean.BeanMenuNivel2" id="menunivel2MapInsert" >
+   	    <parameter property="intmedId"   	               jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+   	    <parameter property="strmedMenu"   	               jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="dtemedFechaIngreso"  	       jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />
+		<parameter property="dtemedFechaUpdate"            jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />		
+		<parameter property="strmedUserIngreso"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedUserUpdate"             jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedLocale"  		       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedTipoSistema"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedNombreImagen"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedNombrePdf"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedNombreMenu"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+		<parameter property="strmedTwitterCard"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedTwitterSite"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedTwitterCreator"  	   jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedTwitterTitle"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedTwitterDescription"     jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedTwitterImage"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedGoogleName"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedGoogleDescription"  	   jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedGoogleImage"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedOgTitle"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedOgType"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedOgUrl"  	               jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedOgImage"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedOgDescription"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedOgSite_name"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedMuestraContenido"  	   jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="intmedNivelUsuario"   	       jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+		<parameter property="strmedEstado"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedEvento"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="intmecId"           	       jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+		<parameter property="intmedPosicion"           	   jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+
+	</parameterMap>
+	
+	<parameterMap class="bean.BeanMenuNivel2" id="menunivel2MapUpdate" >
+   	    <parameter property="intmedId"   	               jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+   	    <parameter property="strmedMenu"   	               jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="dtemedFechaUpdate"            jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />		
+		<parameter property="strmedUserUpdate"             jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedLocale"  		       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedTipoSistema"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedNombreImagen"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedNombrePdf"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedNombreMenu"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+		<parameter property="strmedTwitterCard"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedTwitterSite"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedTwitterCreator"  	   jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedTwitterTitle"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedTwitterDescription"     jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedTwitterImage"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedGoogleName"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedGoogleDescription"  	   jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedGoogleImage"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedOgTitle"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedOgType"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedOgUrl"  	               jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedOgImage"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedOgDescription"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedOgSite_name"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedMuestraContenido"  	   jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="intmedNivelUsuario"   	       jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+		<parameter property="strmedEstado"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedEvento"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="intmecId"           	       jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+		<parameter property="intmedPosicion"           	   jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+		<parameter property="intmedMensaje"   	           jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />			
+	</parameterMap>	
+	
+	<parameterMap class="bean.BeanMenuNivel2" id="menunivel2MapDelete" >
+   	    <parameter property="intmedId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+		<parameter property="dtemedFechaUpdate"     jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />		
+		<parameter property="strmedUserUpdate"      jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmedEstado"  		jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="intmedMensaje"   	    jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />			
+	</parameterMap>
+
+    <procedure id="SP_MEDINSERT" parameterMap="menunivel2MapInsert">  
+   { call SP_MEDINSERT(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) } 
+    </procedure>
+    
+    <procedure id="SP_MEDUPDATE" parameterMap="menunivel2MapUpdate">  
+   { call SP_MEDUPDATE(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) } 
+    </procedure>
+
+    <procedure id="SP_MEDSEARCHLIST" resultClass="bean.BeanMenuNivel2" parameterClass="bean.BeanMenuNivel2">  
+   { call SP_MEDSEARCHLIST(#strmedLocale#,#strmedNombreMenu#) } 
+    </procedure>
+    
+    <procedure id="SP_MEDSEARCHXID" resultClass="bean.BeanMenuNivel2" parameterClass="Integer">  
+   { call SP_MEDSEARCHXID(#value#) } 
+    </procedure>
+    
+    <procedure id="SP_MEDLIST" resultClass="bean.BeanMenuNivel2" parameterClass="bean.BeanMenuNivel2">  
+   { call SP_MEDLIST(#strmedLocale#,#intmecId#,#intmedNivelUsuario#) } 
+    </procedure>
+
+</sqlMap>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN" 
+           "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+<!--
+El fichero de properties especificado aquí es el lugar donde poner las propiedades (name=value)
+que se usarán después en este fichero de configuración donde veamos elementos de configuración
+como por ejemplo ”${driver}”. El fichero suele ser relativo al classpath y es opcional.-->
+
+<properties resource="SqlMapConfigApplication.properties" />
+
+<!-- Estas propiedades controlan los detalles de configuración de SqlMap, principalmente las
+relacionadas con la gestión de transacciones. Todas son opcionales (ver Guía del Desarrollador
+para más información).-->
+<settings
+	cacheModelsEnabled="true"
+	enhancementEnabled="true"
+	lazyLoadingEnabled="true"
+	maxRequests="32"
+	maxSessions="10"
+	maxTransactions="5"
+	useStatementNamespaces="false"
+/>
+
+<!-- typeAlias permite usar un nombre corto en referencia a un nombre cualificado de una clase-->
+
+<!-- Configura un DataSource que podrá ser usado con SQL Map usando SimpleDataSource. Date
+cuenta del uso de las propiedades del fichero de recursos de arriba. -->
+<transactionManager type="JDBC" >
+	<dataSource type="SIMPLE">
+		<property name="JDBC.Driver" value="${driver}"/>
+		<property name="JDBC.ConnectionURL" value="${url}"/>
+		<property name="JDBC.Username" value="${username}"/>
+		<property name="JDBC.Password" value="${password}"/>
+	</dataSource>
+</transactionManager>
+
+<!-- Identifica todos los ficheros de mapeos XML usados en SQL Map para cargar los mapeos SQL.
+Date cuenta de los paths son relativos al classpath. Por ahora, solo tenemos uno... -->
+<sqlMap resource="sqlmaps/Usuario.xml" />
+<sqlMap resource="sqlmaps/Persona.xml" />
+<sqlMap resource="sqlmaps/Pais.xml" />
+<sqlMap resource="sqlmaps/Estado.xml" />
+<sqlMap resource="sqlmaps/Perfil.xml" />
+<sqlMap resource="sqlmaps/OpcionPerfil.xml" />
+<sqlMap resource="sqlmaps/ActualidadLaboral.xml" />
+<sqlMap resource="sqlmaps/Imagen.xml" />
+<sqlMap resource="sqlmaps/Boletin.xml" />
+<sqlMap resource="sqlmaps/MenuNivel1.xml" />
+<sqlMap resource="sqlmaps/MenuNivel2.xml" />
+<sqlMap resource="sqlmaps/MenuNivel3.xml" />
+<sqlMap resource="sqlmaps/Contactenos.xml" />
+<sqlMap resource="sqlmaps/Email.xml" />
+<sqlMap resource="sqlmaps/TrabajaNosotros.xml" />
+
+</sqlMapConfig>

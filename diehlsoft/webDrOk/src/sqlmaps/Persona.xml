@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+						"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Persona">
+
+    <parameterMap class="bean.BeanPersona" id="perMapInsert" >
+   	    <parameter property="intperId"   	         jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+   	    <parameter property="strperNombre"   	     jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strperApellidoPaterno"  jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strperApellidoMaterno"  jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strperSexo"   	         jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strperCorreo" 	  	     jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+		<parameter property="strperDireccion"        jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strperTelefono"         jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strperEstado"           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="dteperFechaIngreso"  	 jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />
+		<parameter property="dteperFechaUpdate"      jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />		
+		<parameter property="strperUserIngreso"      jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strperUserUpdate"  	 jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="intusuId"               jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+		<parameter property="strperTheme"            jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strperLocale"           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="intpefId"               jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+		<parameter property="intpisId"               jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+
+	</parameterMap>
+	
+	<procedure id="SP_PERINSERT" parameterMap="perMapInsert">  
+   { call SP_PERINSERT(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) } 
+    </procedure>
+   
+    <procedure id="SP_PEROBTENER" parameterClass="Integer"
+	                                 resultClass="bean.BeanPersona">  
+   { call SP_PEROBTENER( #value# ) } 
+</procedure>
+    
+</sqlMap>
