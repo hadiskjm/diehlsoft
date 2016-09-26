@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+						"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="ActualidadLaboral">
+	  
+    <parameterMap class="bean.BeanActualidadLaboral" id="actualidadLaboralMapInsert" >
+   	    <parameter property="intaclId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+   	    <parameter property="straclTitulo"   	    jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+   	    <parameter property="straclNombre"   	    jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+   	    <parameter property="straclContenido"  	    jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+   	    <parameter property="straclResumen"  	    jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="dteaclFechaIngreso"  	jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />
+		<parameter property="dteaclFechaUpdate"     jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />		
+		<parameter property="straclUserIngreso"  	jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="straclUserUpdate"      jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="straclEstado"  		jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="straclFile"  	        jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="intbolId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+		<parameter property="intusuId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+	</parameterMap>
+	
+	<parameterMap class="bean.BeanActualidadLaboral" id="actualidadLaboralMapUpdate" >
+   	    <parameter property="intaclId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+   	    <parameter property="straclTitulo"   	    jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+   	    <parameter property="straclNombre"   	    jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+   	    <parameter property="straclContenido"  	    jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+   	    <parameter property="straclResumen"  	    jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="dteaclFechaUpdate"     jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />		
+		<parameter property="straclUserUpdate"      jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="straclEstado"  		jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="straclFile"  	        jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="intbolId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+		<parameter property="intusuId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+		<parameter property="intaclMensaje"   	    jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />			
+	</parameterMap>	
+
+    <procedure id="SP_ACLINSERT" parameterMap="actualidadLaboralMapInsert">  
+   { call SP_ACLINSERT(?,?,?,?,?,?,?,?,?,?,?,?,?) } 
+    </procedure>
+    
+    <procedure id="SP_ACLUPDATE" parameterMap="actualidadLaboralMapUpdate">  
+   { call SP_ACLUPDATE(?,?,?,?,?,?,?,?,?,?,?,?) } 
+    </procedure>
+    
+    <procedure id="SP_ACLACTIVEOINACTIVE" resultClass="bean.BeanActualidadLaboral" parameterClass="bean.BeanActualidadLaboral">   
+   { call SP_ACLACTIVEOINACTIVE(#intaclId#,#dteaclFechaUpdate#,#straclUserUpdate#,#straclEstado#) } 
+    </procedure>
+    
+    <procedure id="SP_ACLAUCLIST" resultClass="bean.BeanActualidadLaboral" parameterClass="bean.BeanActualidadLaboral">  
+   { call SP_ACLAUCLIST(#straclNombre#) } 
+    </procedure>
+    
+    <procedure id="SP_ACLSEARCHLIST" parameterClass="Integer" resultClass="bean.BeanActualidadLaboral">
+   { call SP_ACLSEARCHLIST(#value#) } 
+    </procedure>
+    
+    <procedure id="SP_ACLSEARCHXID" parameterClass="Integer" resultClass="bean.BeanActualidadLaboral">  
+   { call SP_ACLSEARCHXID(#value#) } 
+    </procedure>
+    
+     <procedure id="SP_ACLSEARCHLISTXBOLID2" parameterClass="Integer" resultClass="bean.BeanActualidadLaboral">  
+   { call SP_ACLSEARCHLISTXBOLID2(#value#) } 
+    </procedure>
+    
+    <procedure id="SP_ACLSEARCHLISTXBOLID" parameterClass="Integer" resultClass="bean.BeanActualidadLaboral">  
+   { call SP_ACLSEARCHLISTXBOLID(#value#) } 
+    </procedure>
+    
+    <procedure id="SP_ACLSEARCHLISTXESTADO" parameterClass="String" resultClass="bean.BeanActualidadLaboral">  
+   { call SP_ACLSEARCHLISTXESTADO(#value#) } 
+    </procedure>
+</sqlMap>

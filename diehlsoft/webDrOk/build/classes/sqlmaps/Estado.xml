@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+						"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Estado">
+	  
+    <parameterMap class="bean.BeanEstado" id="estadoMap" >
+   	    <parameter property="intestId"   	       jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+   	    <parameter property="strestNombre"   	   jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strestLocale"  	   jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strestParaModulo"     jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />		
+	</parameterMap>
+
+    <procedure id="SP_ESTMODULOALL" resultClass="bean.BeanEstado" parameterClass="bean.BeanEstado">  
+   { call SP_ESTMODULOALL(#strestLocale#,#strestParaModulo#) } 
+    </procedure>
+    
+</sqlMap>

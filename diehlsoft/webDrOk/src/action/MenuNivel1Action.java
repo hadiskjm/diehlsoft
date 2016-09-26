@@ -24,16 +24,16 @@ import org.apache.struts.action.ActionMessage;
 import org.apache.struts.action.ActionMessages;
 import org.apache.struts.action.DynaActionForm;
 
-import services.EstadoService;
-import services.MenuNivel1Service;
-import services.MenuNivel2Service;
-import services.MenuNivel3Service;
-import services.PaisService;
 import bean.BeanEstado;
 import bean.BeanMenuNivel1;
 import bean.BeanMenuNivel2;
 import bean.BeanMenuNivel3;
 import bean.BeanPersona;
+import services.EstadoService;
+import services.MenuNivel1Service; 
+import services.MenuNivel2Service;
+import services.MenuNivel3Service;
+import services.PaisService;
 
 public class MenuNivel1Action extends Action{
 	MenuNivel1Service mecservice=new MenuNivel1Service();
@@ -344,7 +344,7 @@ public class MenuNivel1Action extends Action{
 			}
 			HttpSession sessionmecMenu = request.getSession(true);
 			sessionmecMenu.setAttribute("mecMenu",mecMenu);
-			*/
+			*/ 
 			
 			forwardName="mecMenu";
 		} catch (Exception e) {

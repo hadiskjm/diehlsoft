@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+						"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="MenuNivel1">
+	  
+    <parameterMap class="bean.BeanMenuNivel1" id="menunivel1MapInsert" >
+   	    <parameter property="intmecId"   	               jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+   	    <parameter property="strmecMenu"   	               jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="dtemecFechaIngreso"  	       jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />
+		<parameter property="dtemecFechaUpdate"            jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />		
+		<parameter property="strmecUserIngreso"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecUserUpdate"             jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecLocale"  		       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecTipoSistema"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecNombreImagen"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecNombrePdf"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecNombreMenu"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+		<parameter property="strmecTwitterCard"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecTwitterSite"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecTwitterCreator"  	   jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecTwitterTitle"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecTwitterDescription"     jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecTwitterImage"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecGoogleName"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecGoogleDescription"  	   jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecGoogleImage"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecOgTitle"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecOgType"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecOgUrl"  	               jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecOgImage"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecOgDescription"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecOgSite_name"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecMuestraContenido"  	   jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="intmecNivelUsuario"   	       jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+		<parameter property="strmecEstado"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecEvento"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="intmecPosicion"   	           jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+		
+	
+	</parameterMap>
+	
+	<parameterMap class="bean.BeanMenuNivel1" id="menunivel1MapUpdate" >
+   	    <parameter property="intmecId"   	               jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+   	    <parameter property="strmecMenu"   	               jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="dtemecFechaUpdate"            jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />		
+		<parameter property="strmecUserUpdate"             jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecLocale"  		       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecTipoSistema"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecNombreImagen"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecNombrePdf"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecNombreMenu"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="INOUT" />
+		<parameter property="strmecTwitterCard"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecTwitterSite"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecTwitterCreator"  	   jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecTwitterTitle"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecTwitterDescription"     jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecTwitterImage"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecGoogleName"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecGoogleDescription"  	   jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecGoogleImage"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecOgTitle"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecOgType"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecOgUrl"  	               jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecOgImage"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecOgDescription"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecOgSite_name"  	       jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecMuestraContenido"  	   jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="intmecNivelUsuario"   	       jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+		<parameter property="strmecEstado"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecEvento"  	           jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="intmecPosicion"   	           jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN" />
+		<parameter property="intmecMensaje"   	           jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+					
+	</parameterMap>	
+	
+	<parameterMap class="bean.BeanMenuNivel1" id="menunivel1MapDelete" >
+   	    <parameter property="intmecId"   	        jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />
+		<parameter property="dtemecFechaUpdate"     jdbcType="DATE"    javaType="java.util.Date"    mode="IN" />		
+		<parameter property="strmecUserUpdate"      jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="strmecEstado"  		jdbcType="VARCHAR" javaType="java.lang.String"  mode="IN" />
+		<parameter property="intmecMensaje"   	    jdbcType="INTEGER" javaType="java.lang.Integer" mode="INOUT" />			
+	</parameterMap>
+
+    <procedure id="SP_MECINSERT" parameterMap="menunivel1MapInsert">  
+   { call SP_MECINSERT(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) } 
+    </procedure>
+    
+    <procedure id="SP_MECUPDATE" parameterMap="menunivel1MapUpdate">  
+   { call SP_MECUPDATE(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) } 
+    </procedure>
+
+    <procedure id="SP_MECSEARCHLIST" resultClass="bean.BeanMenuNivel1" parameterClass="bean.BeanMenuNivel1">  
+   { call SP_MECSEARCHLIST(#strmecLocale#,#strmecNombreMenu#) } 
+    </procedure>
+    
+    <procedure id="SP_MECSEARCHXID" resultClass="bean.BeanMenuNivel1" parameterClass="Integer">  
+   { call SP_MECSEARCHXID(#value#) } 
+    </procedure>
+    
+    <procedure id="SP_MECLIST" resultClass="bean.BeanMenuNivel1" parameterClass="bean.BeanMenuNivel1">  
+   { call SP_MECLIST(#strmecLocale#,#intmecNivelUsuario#) } 
+    </procedure>
+    
+  
+
+</sqlMap>
