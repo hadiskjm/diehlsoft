@@ -177,8 +177,8 @@ public class MenuNivel1Action extends Action{
 				}
 						
 				 try {
-				      //OutputStream fout= new FileOutputStream(this.getServlet().getServletContext().getRealPath("\\pages\\")+"\\general\\"+p_intmecNivelUsuario+"c.jsp");//windows
-				      OutputStream fout= new FileOutputStream(this.getServlet().getServletContext().getRealPath("/pages/")+"/general/"+p_intmecNivelUsuario+"c.jsp");//linux
+				      OutputStream fout= new FileOutputStream(this.getServlet().getServletContext().getRealPath("\\pages\\")+"\\general\\"+p_intmecNivelUsuario+"c.jsp");//windows
+				      //OutputStream fout= new FileOutputStream(this.getServlet().getServletContext().getRealPath("/pages/")+"/general/"+p_intmecNivelUsuario+"c.jsp");//linux
 				      OutputStream bout= new BufferedOutputStream(fout);
 				      OutputStreamWriter out = new OutputStreamWriter(bout,Charset.forName("windows-1252"));
 				      System.out.println("entro");
