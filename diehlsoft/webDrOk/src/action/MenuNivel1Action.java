@@ -160,6 +160,7 @@ public class MenuNivel1Action extends Action{
 				BeanMenuNivel1 mec1bean=new BeanMenuNivel1();
 				mec1bean.setStrmecLocale(p_strmecLocale);
 				mec1bean.setIntmecNivelUsuario(p_intmecNivelUsuario);
+				mec1bean.setStrmecTipoSistema(menunivel1Form.getString("strmecTipoSistema"));
 				
 				ArrayList<BeanMenuNivel1> lista=mecservice.mecList(mec1bean);
 				if(lista !=null){

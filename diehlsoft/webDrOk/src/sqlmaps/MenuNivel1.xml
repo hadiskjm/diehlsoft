@@ -99,7 +99,7 @@
     </procedure>
     
     <procedure id="SP_MECLIST" resultClass="bean.BeanMenuNivel1" parameterClass="bean.BeanMenuNivel1">  
-   { call SP_MECLIST(#strmecLocale#,#intmecNivelUsuario#) } 
+   { call SP_MECLIST(#strmecLocale#,#intmecNivelUsuario#,#strmecTipoSistema#) } 
     </procedure>
     
   
