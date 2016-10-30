@@ -104,6 +104,10 @@ public class RedireccionandoAction extends Action {
 			System.out.println("Enviando mecSearch");
 			forwardName = "mecSearch";
 		}
+		if (parametro.equals("mecCreaMenu")) {
+			System.out.println("Enviando mecSearch");
+			forwardName = "mecCreaMenu";
+		}
 		if (parametro.equals("medSearch")) {
 			System.out.println("Enviando medSearch");
 			forwardName = "medSearch";

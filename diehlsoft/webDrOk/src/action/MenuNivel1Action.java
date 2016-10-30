@@ -82,7 +82,39 @@ public class MenuNivel1Action extends Action{
 				forwardName =mecCreateMenu(mapping, form, request, response);
 				System.out.println("Enviando al action :"+forwardName);
 			}
+			if (parametro.equals("mecCreaMenu")) {
+				forwardName =mecCreaMenu(mapping, form, request, response);
+				System.out.println("Enviando al action :"+forwardName);
+			}
 			return mapping.findForward(forwardName);
+	}
+	
+	@SuppressWarnings("rawtypes")
+	private String mecCreaMenu(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response) {
+		DynaActionForm menunivel1Form = (DynaActionForm)form;
+		menunivel1Form.set("flagConfirm","FALSE");
+		String forwardName = "";
+		limpiar(menunivel1Form);
+
+		BeanEstado  estbeantiposistema= new BeanEstado();
+		estbeantiposistema.setStrestLocale("es_PE");//CAMBIAR ESTE DATO SETEADO
+		estbeantiposistema.setStrestParaModulo("tiposistema");
+
+		try {
+
+			ArrayList mecListTipoSistema=estservice.allEstadoModulo(estbeantiposistema);
+			menunivel1Form.set("mecListTipoSistema",mecListTipoSistema);	
+			
+			forwardName="mecCreaMenu";
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			forwardName = "error";
+		}
+		
+		
+		return forwardName;
 	}
     @SuppressWarnings("unchecked")
 	private String mecCreateMenu(ActionMapping mapping, ActionForm form, HttpServletRequest request,

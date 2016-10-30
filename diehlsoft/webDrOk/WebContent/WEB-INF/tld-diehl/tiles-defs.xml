@@ -145,6 +145,12 @@
 	<put name="body" value="/pages/menunivel1/menunivel1ViewCorp.jsp" />
 </definition>
 
+<definition name="page.corp.menunivel1CreaMenu" extends="base.definition" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: DrOk Healthcare Corporation ::.." />
+	<put name="body" value="/pages/menunivel1/menunivel1CreaMenu.jsp" />
+</definition>
+
 <!--  Fin Page de MenuNivel1  -->
 <!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
 

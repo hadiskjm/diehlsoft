@@ -799,6 +799,19 @@
             <forward name="error" path="page.corp.error" />  
         </action>
         
+        <!--  Actualizar Menu Primer Nivel Crea Menu -->
+        <action path="/menunivel1CreaMenu" 
+                type="action.MenuNivel1Action"
+                parameter="event"
+                name="menunivel1Form"
+                validate="false"
+                scope="session"
+                input="page.corp.menunivel1ViewCorp">
+            <forward name="mecCreaMenu" path="page.corp.menunivel1CreaMenu" />
+            <forward name="mecListSearch" path="page.corp.menunivel1Search" />
+            <forward name="error" path="page.corp.error" />  
+        </action>
+        
          <!-- *******fin Para todas las opciones MenuNivel1****** --> 
          <!-- *************************************************** -->
          <!-- *************************************************** -->
