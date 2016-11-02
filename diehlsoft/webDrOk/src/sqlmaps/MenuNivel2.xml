@@ -99,7 +99,7 @@
     </procedure>
     
     <procedure id="SP_MEDLIST" resultClass="bean.BeanMenuNivel2" parameterClass="bean.BeanMenuNivel2">  
-   { call SP_MEDLIST(#strmedLocale#,#intmecId#,#intmedNivelUsuario#) } 
+   { call SP_MEDLIST(#strmedLocale#,#intmecId#,#intmedNivelUsuario#,#strmedTipoSistema#) } 
     </procedure>
 
 </sqlMap>

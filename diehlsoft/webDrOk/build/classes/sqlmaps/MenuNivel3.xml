@@ -99,7 +99,7 @@
     </procedure>
    
    <procedure id="SP_METLIST" resultClass="bean.BeanMenuNivel3" parameterClass="bean.BeanMenuNivel3">  
-   { call SP_METLIST(#strmetLocale#,#intmedId#,#intmetNivelUsuario#) } 
+   { call SP_METLIST(#strmetLocale#,#intmedId#,#intmetNivelUsuario#,#strmetTipoSistema#) } 
     </procedure>
   
 

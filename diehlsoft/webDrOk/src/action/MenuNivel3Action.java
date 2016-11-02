@@ -415,6 +415,7 @@ public class MenuNivel3Action extends Action{
 			medbean.setStrmedLocale(p_strmedLocale);
 			medbean.setIntmecId(p_intmecId);
 			medbean.setIntmedNivelUsuario(3);
+			medbean.setStrmedTipoSistema("%%");
 			
 			ArrayList metListMenuNivel2=medservice.medList(medbean);
 			menunivel3Form.set("metListMenuNivel2",metListMenuNivel2);
@@ -451,6 +452,7 @@ public class MenuNivel3Action extends Action{
 		BeanMenuNivel1 mec1bean=new BeanMenuNivel1();
 		mec1bean.setStrmecLocale(p_strmecLocale);
 		mec1bean.setIntmecNivelUsuario(3);
+		mec1bean.setStrmecTipoSistema("%%");
 		
 		try {
 			ArrayList metListMenuNivel1=mecservice.mecList(mec1bean);

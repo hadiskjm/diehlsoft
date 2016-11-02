@@ -44,7 +44,7 @@ public class MenuNivel1Action extends Action{
 	
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
-			throws Exception {
+			throws Exception { 
 	
 	    	String forwardName = "error";
 			String parametro = request.getParameter("event");
@@ -122,7 +122,7 @@ public class MenuNivel1Action extends Action{
             DynaActionForm menunivel1Form = (DynaActionForm)form;
 		
 			Integer p_intmecNivelUsuario=(Integer)menunivel1Form.get("intmenuNivelUser");;
-			
+			String p_valorTipoSistema="";
 			
 			String forwardName="",p_strmecLocale="es_PE",
 					mecMenu="",mecAcumula="",medAcumula="",medAcumulaSubmenu="",
@@ -157,6 +157,14 @@ public class MenuNivel1Action extends Action{
 			
 			try {
 				
+				if(menunivel1Form.getString("strmecTipoSistema").equals("CORPORACION")){
+					p_valorTipoSistema="c";
+				}else if(menunivel1Form.getString("strmecTipoSistema").equals("EDUCACION")){
+					p_valorTipoSistema="e";
+				}else{
+					p_valorTipoSistema="n";
+				}
+				
 				BeanMenuNivel1 mec1bean=new BeanMenuNivel1();
 				mec1bean.setStrmecLocale(p_strmecLocale);
 				mec1bean.setIntmecNivelUsuario(p_intmecNivelUsuario);
@@ -170,6 +178,8 @@ public class MenuNivel1Action extends Action{
 					medbean.setStrmedLocale(mecbean.getStrmecLocale());
 					medbean.setIntmecId(mecbean.getIntmecId());
 					medbean.setIntmedNivelUsuario(p_intmecNivelUsuario);
+					medbean.setStrmedTipoSistema(menunivel1Form.getString("strmecTipoSistema"));
+					
 					ArrayList<BeanMenuNivel2> lista2=medservice.medList(medbean);
 					if(lista2.size()>1){   
 						mecAcumula+=lisubmenuopen+mecbean.getStrmecNombreMenu()+asubmenuclose+ulsubmenuopen;
@@ -182,6 +192,8 @@ public class MenuNivel1Action extends Action{
 							metbean.setStrmetLocale(medbean2.getStrmedLocale());
 							metbean.setIntmedId(medbean2.getIntmedId());
 							metbean.setIntmetNivelUsuario(p_intmecNivelUsuario);
+							metbean.setStrmetTipoSistema(menunivel1Form.getString("strmecTipoSistema"));
+							
 							ArrayList<BeanMenuNivel3> lista3=metservice.metList(metbean);
 								if(lista3.size()>1){ 
 									medAcumula+=lisubmenu3open+medbean2.getStrmedNombreMenu()+asubmenu3close+ulsubmenu3open;
@@ -210,8 +222,8 @@ public class MenuNivel1Action extends Action{
 				}
 						
 				 try {
-				      OutputStream fout= new FileOutputStream(this.getServlet().getServletContext().getRealPath("\\pages\\")+"\\general\\"+p_intmecNivelUsuario+"c.jsp");//windows
-				      //OutputStream fout= new FileOutputStream(this.getServlet().getServletContext().getRealPath("/pages/")+"/general/"+p_intmecNivelUsuario+"c.jsp");//linux
+				      OutputStream fout= new FileOutputStream(this.getServlet().getServletContext().getRealPath("\\pages\\")+"\\general\\"+p_intmecNivelUsuario+p_valorTipoSistema+".jsp");//windows
+				      //OutputStream fout= new FileOutputStream(this.getServlet().getServletContext().getRealPath("/pages/")+"/general/"+p_intmecNivelUsuario+p_valorTipoSistema+".jsp");//linux
 				      OutputStream bout= new BufferedOutputStream(fout);
 				      OutputStreamWriter out = new OutputStreamWriter(bout,Charset.forName("windows-1252"));
 				      System.out.println("entro");

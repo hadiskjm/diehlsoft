@@ -97,7 +97,7 @@ function createMenu(){
 
                  <div class="cbp-mc-form">
 				<fieldset>
-				    <legend><bean:message key="menunivel1Form.mecNew.legend.og"/></legend>
+				    <legend><bean:message key="menunivel1Form.mecNew.legend.general"/></legend>
 					<div class="cbp-mc-column25">
 					
 						<label><bean:message key="menunivel1Form.mecNew.cbo.intmenuNivelUser"/></label>
