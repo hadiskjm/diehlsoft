@@ -1,6 +1,7 @@
 package factories;
 
 import dao.ActualidadLaboralDAO;
+import dao.AlternativaDAO;
 import dao.BoletinDAO;
 import dao.ContactenosDAO;
 import dao.EmailDAO;
@@ -17,6 +18,7 @@ import dao.PreguntaDAO;
 import dao.TrabajaNosotrosDAO;
 import dao.UsuarioDAO;
 import dbDAO.dbActualidadLaboralDAO;
+import dbDAO.dbAlternativaDAO;
 import dbDAO.dbBoletinDAO;
 import dbDAO.dbContactenosDAO;
 import dbDAO.dbEmailDAO;
@@ -99,5 +101,10 @@ public class MySqlDAOFactory extends DAOFactory{
 	public PreguntaDAO getPreguntaDAO() {
 		// TODO Auto-generated method stub
 		return new dbPreguntaDAO();
+	}
+	@Override
+	public AlternativaDAO getAlternativaDAO() {
+		// TODO Auto-generated method stub
+		return new dbAlternativaDAO();
 	}
 }

@@ -2,6 +2,7 @@ package factories;
 
 
 import dao.ActualidadLaboralDAO;
+import dao.AlternativaDAO;
 import dao.BoletinDAO;
 import dao.ContactenosDAO;
 import dao.EmailDAO;
@@ -43,6 +44,7 @@ public abstract class DAOFactory {
 	  public abstract EmailDAO getEmailDAO();
 	  public abstract TrabajaNosotrosDAO getTrabajaNosotrosDAO();
 	  public abstract PreguntaDAO getPreguntaDAO();
+	  public abstract AlternativaDAO getAlternativaDAO();
 	  
 	  public static DAOFactory getDAOFactory(int whichFactory) {
 	    switch (whichFactory) {
