@@ -1,3 +1,7 @@
 /action/
 /bean/
-/sqlmaps/
+/dao/
+/dbDAO/
+/factories/
+/services/
+/util/

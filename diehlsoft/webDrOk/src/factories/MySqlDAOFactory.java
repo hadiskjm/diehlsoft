@@ -13,6 +13,7 @@ import dao.OpcionPerfilDAO;
 import dao.PaisDAO;
 import dao.PerfilDAO;
 import dao.PersonaDAO;
+import dao.PreguntaDAO;
 import dao.TrabajaNosotrosDAO;
 import dao.UsuarioDAO;
 import dbDAO.dbActualidadLaboralDAO;
@@ -28,6 +29,7 @@ import dbDAO.dbOpcionPerfilDAO;
 import dbDAO.dbPaisDAO;
 import dbDAO.dbPerfilDAO;
 import dbDAO.dbPersonaDAO;
+import dbDAO.dbPreguntaDAO;
 import dbDAO.dbTrabajaNosotrosDAO;
 import dbDAO.dbUsuarioDAO;
 
@@ -92,5 +94,10 @@ public class MySqlDAOFactory extends DAOFactory{
 	public TrabajaNosotrosDAO getTrabajaNosotrosDAO() {
 		// TODO Auto-generated method stub
 		return new dbTrabajaNosotrosDAO();
+	}
+	@Override
+	public PreguntaDAO getPreguntaDAO() {
+		// TODO Auto-generated method stub
+		return new dbPreguntaDAO();
 	}
 }

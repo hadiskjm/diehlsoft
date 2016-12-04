@@ -14,6 +14,7 @@ import dao.OpcionPerfilDAO;
 import dao.PaisDAO;
 import dao.PerfilDAO;
 import dao.PersonaDAO;
+import dao.PreguntaDAO;
 import dao.TrabajaNosotrosDAO;
 import dao.UsuarioDAO;
 
@@ -41,6 +42,7 @@ public abstract class DAOFactory {
 	  public abstract ContactenosDAO getContactenosDAO();
 	  public abstract EmailDAO getEmailDAO();
 	  public abstract TrabajaNosotrosDAO getTrabajaNosotrosDAO();
+	  public abstract PreguntaDAO getPreguntaDAO();
 	  
 	  public static DAOFactory getDAOFactory(int whichFactory) {
 	    switch (whichFactory) {

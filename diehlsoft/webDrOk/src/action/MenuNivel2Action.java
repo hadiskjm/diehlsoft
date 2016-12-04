@@ -213,6 +213,8 @@ public class MenuNivel2Action extends Action{
 		BeanMenuNivel1 mec1bean=new BeanMenuNivel1();
 		mec1bean.setStrmecLocale(p_strmecLocale);
 		mec1bean.setIntmecNivelUsuario(3);
+		mec1bean.setStrmecTipoSistema("%%");
+		
 		
 	    try {
 			BeanMenuNivel2 medbean=medservice.medSearchxid(p_intmedId);

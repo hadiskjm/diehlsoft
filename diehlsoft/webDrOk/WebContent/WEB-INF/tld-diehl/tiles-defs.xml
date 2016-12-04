@@ -81,6 +81,38 @@
 	<put name="title" value="..:: Home ::.." />
 	<put name="body" value="/pages/general/home.jsp" />
 </definition>
+
+<definition name="page.education.menunivel1ViewEducation" extends="base.definitionEducation" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: DrOk Healthcare Education ::.." />
+	<put name="body" value="/pages/menunivel1/menunivel1ViewEducation.jsp" />
+</definition>
+
+<definition name="page.education.menunivel2ViewEducation" extends="base.definitionEducation" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: DrOk Healthcare Education ::.." />
+	<put name="body" value="/pages/menunivel2/menunivel2ViewEducation.jsp" />
+</definition>
+
+<definition name="page.education.menunivel3ViewEducation" extends="base.definitionEducation" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: DrOk Healthcare Education ::.." />
+	<put name="body" value="/pages/menunivel3/menunivel3ViewEducation.jsp" />
+</definition>
+
+<!--  Page de Error Education -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+<definition name="page.education.error" extends="base.definitionEducation" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: PAGINA NO ENCONTRADO ::.." />
+	<put name="body" value="/pages/error/error.jsp" />
+</definition>
+
+<!--  Fin Page de Error  -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+
 <!-- Fin Base Tiles Definition Education -->
 <!--########################################-->
 <!--########################################-->
@@ -105,6 +137,8 @@
 	<put name="title" value="..:: Home ::.." />
 	<put name="body" value="/pages/general/home.jsp" />
 </definition>
+
+
 
 <!--  Page de Login -->
 <!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->

@@ -871,6 +871,18 @@
             <forward name="error" path="page.corp.error" />  
         </action>
         
+         <!--  Visor Menu Segundo Nivel Education -->
+        <action path="/menunivel2ViewEducation" 
+                type="action.MenuNivel2Action"
+                parameter="event"
+                name="menunivel2Form"
+                validate="false"
+                scope="session"
+                input="page.education.menunivel2ViewEducation">
+            <forward name="medViewCorp" path="page.education.menunivel2ViewEducation" />
+            <forward name="error" path="page.education.error" />  
+        </action>
+        
          <!-- *******fin Para todas las opciones MenuNivel1****** --> 
          <!-- *************************************************** -->
          <!-- *************************************************** -->

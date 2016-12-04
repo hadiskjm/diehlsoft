@@ -215,6 +215,7 @@ public class MenuNivel3Action extends Action{
 			medbean.setStrmedLocale(p_strmedLocale);
 			medbean.setIntmecId(p_intmecId);
 			medbean.setIntmedNivelUsuario(3);
+			medbean.setStrmedTipoSistema("%%");
 			
 			ArrayList metListMenuNivel2=medservice.medList(medbean);
 			menunivel3Form.set("metListMenuNivel2",metListMenuNivel2);
@@ -250,6 +251,7 @@ public class MenuNivel3Action extends Action{
 		BeanMenuNivel1 mec1bean=new BeanMenuNivel1();
 		mec1bean.setStrmecLocale(p_strmecLocale);
 		mec1bean.setIntmecNivelUsuario(3);
+		mec1bean.setStrmecTipoSistema("%%");
 		
 	    try {
 			BeanMenuNivel3 metbean=metservice.metSearchxid(p_intmetId);
@@ -258,6 +260,8 @@ public class MenuNivel3Action extends Action{
 			BeanMenuNivel2 medbean2=new BeanMenuNivel2();
 			medbean2.setStrmedLocale(medbean.getStrmedLocale());
 			medbean2.setIntmecId(medbean.getIntmecId());
+			medbean2.setIntmedNivelUsuario(3);
+			medbean2.setStrmedTipoSistema(medbean.getStrmedTipoSistema());
 			
 			ArrayList metListMenuNivel3=estservice.allEstadoModulo(estbeanmenunivel3);
 			menunivel3Form.set("metListMenuNivel3",metListMenuNivel3);	
@@ -273,6 +277,8 @@ public class MenuNivel3Action extends Action{
 			
 			ArrayList metListMenuNivel2=medservice.medList(medbean2);
 			menunivel3Form.set("metListMenuNivel2",metListMenuNivel2);
+			
+			System.out.println("Valor de la lista llena :"+metListMenuNivel2.size());
 			
 			menunivel3Form.set("strmetMenu",metbean.getStrmetMenu());
 			menunivel3Form.set("strmetLocale",metbean.getStrmetLocale());
