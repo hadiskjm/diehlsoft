@@ -338,6 +338,12 @@
      <form-bean name="rptGraf1Form" type="org.apache.struts.action.DynaActionForm">
       </form-bean> 
       
+       <form-bean name="preguntaNivel1Form" type="org.apache.struts.action.DynaActionForm">
+
+           <form-property name="pagList"                  type="java.util.ArrayList" />
+           <form-property name="altListXPregunta"         type="java.util.ArrayList" />
+      </form-bean> 
+      
    </form-beans>
     
     <global-exceptions>
@@ -375,6 +381,7 @@
             <forward name="tcnSearch" path="/tcnosotrosSearch.do?event=tcnSearch"/>
             <forward name="perNew" path="page.corp.personaNew"/>
             <forward name="aviso" path="page.corp.avisoLegal"/>
+            <forward name="pgaList" path="/preguntaNivel1.do?event=pgaList"/>
 
         </action>
         
@@ -1049,6 +1056,30 @@
          <!-- *************************************************** -->
          <!-- *************************************************** -->
          <!-- *************************************************** -->
+         
+         
+            
+        <!-- *************************************************** -->
+         <!-- *************************************************** -->
+         <!-- *************************************************** -->
+        <!-- 20. Para todas las opciones Preguntas --> 
+        <!--  Listar Preguntas -->
+         <action path="/preguntaNivel1" 
+                type="action.EvaluacionAction"
+                parameter="event"
+                name="preguntaNivel1Form"
+                validate="true"
+                scope="session"
+                input="page.education.preguntasNivel1">
+            <forward name="pagList" path="page.education.preguntasNivel1" />
+            <forward name="error" path="page.education.error" />  
+        </action>
+         
+         <!-- *******fin Para todas las opciones Preguntas****** --> 
+         <!-- *************************************************** -->
+         <!-- *************************************************** -->
+         <!-- *************************************************** -->
+         
     </action-mappings>
     
     <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>

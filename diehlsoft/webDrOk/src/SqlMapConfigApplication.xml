@@ -53,5 +53,7 @@ Date cuenta de los paths son relativos al classpath. Por ahora, solo tenemos uno
 <sqlMap resource="sqlmaps/Contactenos.xml" />
 <sqlMap resource="sqlmaps/Email.xml" />
 <sqlMap resource="sqlmaps/TrabajaNosotros.xml" />
+<sqlMap resource="sqlmaps/Pregunta.xml" />
+<sqlMap resource="sqlmaps/Alternativa.xml" />
 
 </sqlMapConfig>

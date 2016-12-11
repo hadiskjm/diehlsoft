@@ -132,6 +132,10 @@ public class RedireccionandoAction extends Action {
 			System.out.println("Enviando aviso");
 			forwardName = "aviso";
 		}
+		if (parametro.equals("pgaList")) {
+			System.out.println("Enviando pgaList");
+			forwardName = "pgaList";
+		}
 		return mapping.findForward(forwardName);
 	}
 

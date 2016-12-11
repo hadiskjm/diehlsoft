@@ -5,9 +5,9 @@
 <sqlMap namespace="Alternativa">
 
    
-    <procedure id="SP_ALTLISTXPREGUNTA" parameterClass="int"
+    <procedure id="SP_ALTLISTXPREGUNTA"
 	                                 resultClass="bean.BeanAlternativa">  
-   { call SP_ALTLISTXPREGUNTA( #value# ) } 
+   { call SP_ALTLISTXPREGUNTA() } 
 </procedure>
     
 </sqlMap>

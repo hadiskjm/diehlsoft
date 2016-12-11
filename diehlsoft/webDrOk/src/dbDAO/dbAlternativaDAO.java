@@ -11,8 +11,8 @@ public class dbAlternativaDAO implements AlternativaDAO {
 	SqlMapClient sqlMap=ConexionMySql.getSqlMap();
 	@SuppressWarnings("rawtypes")
 	@Override
-	public ArrayList altListXPregunta(int p_intpgaId) throws Exception {
-		ArrayList lista=(ArrayList) sqlMap.queryForList("SP_ALTLISTXPREGUNTA", p_intpgaId);
+	public ArrayList altListXPregunta() throws Exception {
+		ArrayList lista=(ArrayList) sqlMap.queryForList("SP_ALTLISTXPREGUNTA");
 		return lista;
 	}
 

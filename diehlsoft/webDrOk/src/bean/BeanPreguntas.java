@@ -14,6 +14,9 @@ public class BeanPreguntas implements Serializable{
 	String strpgaUserIngreso;
 	String strpgaUserUpdate;
 	String strpgaLocale;
+	String strpgaImg;
+
+	
 	
 	public int getIntpgaId() {
 		return intpgaId;
@@ -62,6 +65,12 @@ public class BeanPreguntas implements Serializable{
 	}
 	public void setStrpgaLocale(String strpgaLocale) {
 		this.strpgaLocale = strpgaLocale;
+	}
+	public String getStrpgaImg() {
+		return strpgaImg;
+	}
+	public void setStrpgaImg(String strpgaImg) {
+		this.strpgaImg = strpgaImg;
 	}
 	
 	

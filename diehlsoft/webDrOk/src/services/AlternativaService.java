@@ -11,8 +11,8 @@ public class AlternativaService {
 	private AlternativaDAO objAlternativaDAO = objDAOFactory.getAlternativaDAO();
 	
 	@SuppressWarnings("rawtypes")
-	public ArrayList altListXPregunta(int p_intpgaId) throws Exception {
-		ArrayList lista=objAlternativaDAO.altListXPregunta(p_intpgaId);
+	public ArrayList altListXPregunta() throws Exception {
+		ArrayList lista=objAlternativaDAO.altListXPregunta();
 		return lista;
 	}
 

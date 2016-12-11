@@ -100,6 +100,18 @@
 	<put name="body" value="/pages/menunivel3/menunivel3ViewEducation.jsp" />
 </definition>
 
+<!--  Page de Login -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+<definition name="page.education.preguntasNivel1" extends="base.definitionEducation" >
+    <put name="header" value="/pages/general/header.jsp" />
+	<put name="title" value="..:: Evaluación ::.." />
+	<put name="body" value="/pages/question/preguntasNivel1.jsp" />
+</definition>
+
+<!--  Fin Page de login  -->
+<!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
 <!--  Page de Error Education -->
 <!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
 
@@ -108,6 +120,7 @@
 	<put name="title" value="..:: PAGINA NO ENCONTRADO ::.." />
 	<put name="body" value="/pages/error/error.jsp" />
 </definition>
+
 
 <!--  Fin Page de Error  -->
 <!--  &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->

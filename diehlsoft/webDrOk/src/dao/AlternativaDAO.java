@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public interface AlternativaDAO {
 	@SuppressWarnings("rawtypes")
-	public ArrayList altListXPregunta(int p_intpgaId) throws Exception;
+	public ArrayList altListXPregunta() throws Exception;
 
 
 }
